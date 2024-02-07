@@ -1,0 +1,29 @@
+.content {
+    width: 100%;
+}
+
+.content h3 {
+    font-size: 25px;
+}
+
+.inputDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    margin-top: 110px;
+    border-radius: 10px;
+}
+
+.content input {
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 18px;
+    border: none;
+}
+
+.tips {
+    margin-top: 60px;
+}

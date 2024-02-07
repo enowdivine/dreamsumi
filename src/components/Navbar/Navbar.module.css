@@ -1,0 +1,43 @@
+.wrapper {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 80px;
+    z-index: 1000;
+    background-color: #0c0c0c !important;
+}
+
+.brand a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.links div {
+    margin: 0 3px;
+}
+
+.links a {
+    text-decoration: none;
+    color: white;
+}
+
+.profileImg {
+    margin: 0 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

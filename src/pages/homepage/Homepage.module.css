@@ -1,0 +1,53 @@
+.contentWrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.content {
+    width: 90%;
+}
+
+.content h3 {
+    font-size: 45px;
+}
+
+.inputDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    margin-top: 130px;
+    border-radius: 10px;
+}
+
+.inputDiv a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 70px;
+    cursor: pointer;
+}
+
+.content input {
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    outline: none;
+    font-size: 18px;
+    border: none;
+}
+
+.btnDiv {
+    margin-top: 180px;
+}
+
+.btnDiv a {
+    background-color: #373196;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+}

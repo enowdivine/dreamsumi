@@ -1,0 +1,33 @@
+import React from "react";
+import { AiOutlineUser } from "react-icons/ai";
+import { Link } from "react-router-dom";
+import styles from "./Navbar.module.css";
+
+const Navbar = () => {
+  return (
+    <div className={styles.wrapper}>
+      <div className={styles.brand}>
+        <Link to="/">Dream Sumi</Link>
+      </div>
+      <div className={styles.links}>
+        <div>
+          <Link to="/how-it-works">How it works</Link>
+        </div>
+        <div className={styles.profileImg}>
+          <AiOutlineUser size={20} color="black" />
+        </div>
+        <div>
+          <Link to="#">Credits:</Link>
+        </div>
+        <div>
+          <Link to="/login">Login</Link>
+        </div>
+        <div>
+          <Link to="/signup">Sign Up</Link>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Navbar;

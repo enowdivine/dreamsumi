@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./Styles.module.css";
+import { UserContext } from "../../context/UserContext";
 
 const Prompt1 = () => {
+  const { dreamObject, setDreamObject } = useContext(UserContext);
   return (
     <div className={styles.content}>
       <div>
@@ -11,7 +13,12 @@ const Prompt1 = () => {
         </h3>
       </div>
       <div className={styles.inputDiv}>
-        <input type="text" placeholder="Write your dream ..." />
+        <input
+          type="text"
+          placeholder="Enter ..."
+          value={dreamObject}
+          onChange={(e) => setDreamObject(e.target.value)}
+        />
       </div>
       <div className={styles.tips}>
         <p>

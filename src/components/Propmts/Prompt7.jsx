@@ -1,14 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./Styles.module.css";
+import { UserContext } from "../../context/UserContext";
 
 const Prompt1 = () => {
+  const { artStyle, setArtStyle } = useContext(UserContext);
+
   return (
     <div className={styles.content}>
       <div>
-        <h3>
-          What objects, people, or animals do you envision as the main focus of
-          your artwork?
-        </h3>
+        <h3>Choose Art Style</h3>
       </div>
       <div className={styles.inputDiv}>
         <input type="text" placeholder="Write your dream ..." />

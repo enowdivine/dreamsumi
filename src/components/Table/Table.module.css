@@ -1,0 +1,31 @@
+.tableContainer {
+    margin: 20px;
+}
+
+.filterInput {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+}
+
+.rowEven {
+    background-color: transparent;
+}
+
+.rowOdd {
+    background-color: transparent;
+}

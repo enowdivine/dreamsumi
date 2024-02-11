@@ -1,0 +1,110 @@
+.contentWrapper {
+    /* min-height: 100vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.content {
+    width: 80%;
+    display: flex;
+    padding-top: 90px;
+}
+
+.content .form {
+    width: 65%;
+    text-align: left;
+}
+
+.inputDiv input {
+    display: block;
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    outline: none;
+    border: none;
+    margin: 0 0 20px 0;
+}
+
+.inputDiv label,
+.inputDiv2 label {
+    color: #515151;
+    margin-bottom: 5px;
+}
+
+.inputDiv2 {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0px;
+}
+
+.inputDiv2 div {
+    width: 49%;
+}
+
+.inputDiv2 input {
+    display: block;
+    outline: none;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px
+}
+
+.inputDiv2 select::-ms-expand {
+    display: none;
+}
+
+.inputDiv2 select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    outline: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+.inputDiv2 .SKU {
+    border: 1px solid white;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* stripe */
+
+
+
+.stripe {
+    width: 35%;
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
+}
+
+.striptContent {
+    width: 100%;
+}
+
+.striptContent button {
+    background-color: transparent;
+    border: 1px solid white;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 10px;
+    font-size: 12px;
+}
+
+.striptContent button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.Loader {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

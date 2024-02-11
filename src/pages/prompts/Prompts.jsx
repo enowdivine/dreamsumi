@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import styles from "./Prompt.module.css";
 import Navbar from "../../components/Navbar/Navbar";
 import Prompt1 from "../../components/Propmts/Prompt1";
@@ -9,9 +9,12 @@ import Prompt5 from "../../components/Propmts/Prompt5";
 import Prompt6 from "../../components/Propmts/Prompt6";
 import Prompt7 from "../../components/Propmts/Prompt7";
 import { useNavigate } from "react-router-dom";
+import { UserContext } from "../../context/UserContext";
 
 const Prompts = () => {
   const navigate = useNavigate();
+  const { generatingImage, setGeneratingImage } = useContext(UserContext);
+  const [loading, setLoading] = useState(false);
   const [count, setCount] = useState(0);
   const [editPromt, setEditPromt] = useState(false);
 
@@ -57,7 +60,7 @@ const Prompts = () => {
           ) : count === 5 ? (
             <Prompt6 edit={editPromt} />
           ) : (
-            <Prompt7 />
+            <Prompt7 Loading={loading} SetLoading={setLoading} />
           )}
 
           <div className={styles.btnDiv}>
@@ -68,7 +71,19 @@ const Prompts = () => {
                 ? "Save Prompt"
                 : "Previous"}
             </button>
-            <button onClick={incrementCount}>Next</button>
+            <button
+              onClick={() => {
+                if (count === 6) {
+                  setLoading(true);
+                  setGeneratingImage(true);
+                  return;
+                }
+                incrementCount();
+              }}
+              disabled={generatingImage}
+            >
+              {count === 6 ? "Create Image" : "Next"}
+            </button>
           </div>
         </div>
       </div>

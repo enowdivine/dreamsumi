@@ -1,0 +1,54 @@
+[
+    {
+      "image": "/assets/demo/ai.jpeg",
+      "label": "Anime"
+    },
+    {
+      "image": "/assets/demo/ai.jpeg",
+      "label": "Pixar"
+    },
+    {
+      "image": "/assets/demo/ai.jpeg",
+      "label": "Watercolors"
+    },
+    {
+      "image": "/assets/demo/ai.jpeg",
+      "label": "Realistic"
+    },
+    {
+      "image": "/assets/demo/ai.jpeg",
+      "label": "Stop Motion"
+    },
+    {
+      "image": "/assets/demo/ai.jpeg",
+      "label": "Abstract"
+    },
+    {
+      "image": "/assets/demo/ai.jpeg",
+      "label": "Impressionist"
+    },
+    {
+      "image": "/assets/demo/ai.jpeg",
+      "label": "Double Exposure"
+    },
+    {
+      "image": "/assets/demo/ai.jpeg",
+      "label": "Oil Painting"
+    },
+    {
+      "image": "/assets/demo/ai.jpeg",
+      "label": "Pastel"
+    },
+    {
+      "image": "/assets/demo/ai.jpeg",
+      "label": "Drippinng Art"
+    },
+    {
+      "image": "/assets/demo/ai.jpeg",
+      "label": "Stretch (One Line)"
+    },
+    {
+      "image": "/assets/demo/ai.jpeg",
+      "label": "Polaroid"
+    }
+  ]

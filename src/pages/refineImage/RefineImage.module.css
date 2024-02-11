@@ -1,0 +1,51 @@
+.contentWrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.content {
+    width: 90%;
+    padding-top: 30px;
+}
+
+.generatedSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.images img {
+    width: 220px;
+    height: 220px;
+}
+
+.btns {
+    margin-left: 20px;
+    text-align: center;
+}
+
+.btns button {
+    display: block;
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 5px;
+    margin-top: 10px;
+    color: white;
+    padding: 10px;
+}
+
+.btns button:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+.Loader {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,267 @@
+
+[
+  {
+   "id": 1,
+   "subject": "women",
+   "action": "close up",
+   "location": "with flowers",
+   "mood": "psychedelic",
+   "prompt": "Psychedelic women with flowers close up in anime style",
+   "version": 6,
+   "art_style": "Anime",
+   "aspect": "100:141",
+   "background": "https://media.discordapp.net/attachments/1184080976071110758/1191962612850761799/dreamsumi_psychedelic_women_with_flowers_close_up_in_anime_styl_d7596a36-cd64-45b8-beeb-7dcf93af3ee3.png?ex=65a758b0&is=6594e3b0&hm=fb2441923425798fc6e76ce22b2b5fe07d1a2de93efa096b12ecdefb5c5a587e&=&format=webp&quality=lossless&width=474&height=671"
+  },
+  {
+   "id": 2,
+   "subject": "japanese spitz dog",
+   "action": "sitting",
+   "location": "quiet cyberpunk city streets",
+   "mood": "cartoon",
+   "prompt":"Cartoon",
+   "version": 5,
+   "art_style": "Pixar Animation",
+   "aspect": "100:141",
+   "background": "https://media.discordapp.net/attachments/1184080976071110758/1191985588631511060/dreamsumi_japanese_spitz_dog_walking_through_quiet_cyberpunk_ci_40e06ff1-843d-464a-872e-54ddb454459b.png?ex=65a76e16&is=6594f916&hm=dcb4fc790cfe5edc58e967ed22297fe5835439a095305f93ed181f60380e07e0&=&format=webp&quality=lossless&width=474&height=671"
+  },
+  {
+   "id": 3,
+   "subject": "yellow houses",
+   "action": "light breeze",
+   "location": "norway fjords",
+   "mood": "bright, dreamy, studio ghibli",
+   "version": 6,
+   "art_style": "Few Details Watercolours",
+   "aspect": "100:141",
+   "link": "https://www.midjourney.com/jobs/990bdb9e-65c3-4678-95a7-15c9eb37d43e?index=0",
+   "background": "https://cdn.discordapp.com/attachments/1184080976071110758/1191953471050633317/dreamsumi_yellow_houses_in_light_breeze_in_norway_fjords_bright_990bdb9e-65c3-4678-95a7-15c9eb37d43e.png?ex=65a7502c&is=6594db2c&hm=d57a6a742250a9783c3cd80ea02c4a9e8fe382bb9b31f03eb8f98bb31700544e&"
+  },
+  {
+   "id": 4,
+   "subject": "ancient fantasy dragon with overgrown plant features",
+   "action": "flying",
+   "location": "forest",
+   "mood": "dramatic action",
+   "art_style": "Hyper Realistic",
+   "aspect": "100:141",
+   "link": "https://www.midjourney.com/jobs/b9c86e99-c35e-43be-b5bc-83cc3c62d3f2?index=0",
+   "background": "https://cdn.discordapp.com/attachments/1184080976071110758/1191975063415697448/dreamsumi_flying_ancient_fantasy_dragon_with_overgrown_plant_fe_b9c86e99-c35e-43be-b5bc-83cc3c62d3f2.png?ex=65a76448&is=6594ef48&hm=b2951302d9b935de18b061a102f0921892246ef53f04c1d1860a9d6f178896be&"
+  },
+  {
+   "id": 5,
+   "subject": "two wizards",
+   "action": "dueling",
+   "location": "outside hogwarts",
+   "mood": "realistic, spot lighting, sharp focus, tilt shift",
+   "art_style": "Claymation Stop Motion",
+   "aspect": "100:141",
+   "background": "https://media.discordapp.net/attachments/1184080976071110758/1191969064202018866/dreamsumi_harry_potter_dueling_voldemort_outside_hogwarts_reali_e71decb7-7033-48c2-9653-e1375959db52.png?ex=65a75eb2&is=6594e9b2&hm=728182983e0bc752660401589939100e29ff312812d2b3ee5fdab84849940428&=&format=webp&quality=lossless&width=474&height=671",
+   "link": "https://www.midjourney.com/jobs/e71decb7-7033-48c2-9653-e1375959db52?index=0"
+  },
+  {
+   "id": 6,
+   "subject": "man in suit",
+   "action": "walking",
+   "location": "in busy office lobby",
+   "mood": "colourful",
+   "version": 6,
+   "art_style": "Cubism, Abstract",
+   "aspect": "100:141",
+   "link": "https://www.midjourney.com/jobs/482783d7-d15a-4e97-bbff-dc35fb9c8334?index=0",
+   "background": "https://cdn.discordapp.com/attachments/1184080976071110758/1191953727825915904/dreamsumi_man_in_suit_adjusting_his_jacket_with_busy_office_lob_482783d7-d15a-4e97-bbff-dc35fb9c8334.png?ex=65a7506a&is=6594db6a&hm=71059af3f2e2962896703d657a9463d1779f7606976a468229b6374cb6c5bd92&"
+  },
+  {
+   "id": 7,
+   "subject": "bustling marketplace ",
+   "location": "with flower stalls, produce people",
+   "mood": "bold brush strockes, bright colours",
+   "version": 6,
+   "art_style": "Impressionism",
+   "aspect": "100:141",
+   "background": "https://media.discordapp.net/attachments/1184080976071110758/1191949999374880948/dreamsumi_bustling_marketplace_with_flower_stalls_produce_peopl_7a2b8c3a-b351-4985-9c9f-fd0cdfa43a2f.png?ex=65a74cf1&is=6594d7f1&hm=66221ded1a0da28e051874c343d0385454c2f3221e8f1abc45eada818b4b899d&=&format=webp&quality=lossless&width=474&height=671"
+  },
+  {
+   "id": 8,
+   "subject": "ethereal moon",
+   "action": "rising",
+   "location": "cityscape",
+   "mood": "ominous",
+   "art_style": "Double Exposure",
+   "aspect": "100:141",
+   "link": "https://www.midjourney.com/jobs/ebd49726-9646-44ff-a0bd-f050003e36d0?index=0",
+   "background": "https://cdn.discordapp.com/attachments/1184080976071110758/1191965342126321714/dreamsumi_ethereal_moon_rising_in_cityscape_ominous_mood_double_ebd49726-9646-44ff-a0bd-f050003e36d0.webp?ex=65a75b3b&is=6594e63b&hm=483a35fddb9505d0329d24a50e1d9d7bb0d6d85fc6c79b4b6015e1e7c068329f&"
+  },
+  {
+   "id": 9,
+   "subject": "ship",
+   "action": "tidal waves",
+   "location": "lighthouse in background",
+   "mood": "dramatic, rococo style,",
+   "art_style": "Oil Painting",
+   "aspect": "100:141",
+   "link": "https://www.midjourney.com/jobs/62c46ef3-b420-4fd0-bdfd-13c7668ea269?index=0",
+   "background": "https://cdn.discordapp.com/attachments/1184080976071110758/1191949720042610728/dreamsumi_ship_battling_tidal_waves_in_storm_near_lighthouse_dr_62c46ef3-b420-4fd0-bdfd-13c7668ea269.png?ex=65a74cae&is=6594d7ae&hm=3af747b8d106e020603aa0500dd413f531d1556cb29cfc7f33aa48576602d17d&"
+  },
+  {
+   "id": 10,
+   "subject": "woman in floral dress",
+   "action": "holding umbrella",
+   "location": "standing in lily field",
+   "mood": "serene, dreamy, romanticism painting",
+   "art_style": "Pastel",
+   "aspect": "100:141",
+   "link": "https://www.midjourney.com/jobs/f6c4414d-0c80-446b-a15c-64ddaa993058?index=0",
+   "background": "https://cdn.discordapp.com/attachments/1184080976071110758/1191971145356947506/dreamsumi_woman_in_floral_dress_holding_an_umbrella_standing_in_f6c4414d-0c80-446b-a15c-64ddaa993058.png?ex=65a760a2&is=6594eba2&hm=796767b42f2ed922ae28eedc56fa5e009fb23e92ef1bb476605c4757f945a60e&"
+  },
+  {
+   "id": 11,
+   "subject": "lion face",
+   "action": "growling",
+   "location": "rainforest",
+   "mood": "powerful",
+   "Stylize": 60,
+   "version": 6,
+   "art_style": "Dripping Art",
+   "aspect": "100:141",
+   "link": "https://www.midjourney.com/jobs/98e07e27-d48e-47ce-a7c8-da024f78154c?",
+   "background": "https://cdn.discordapp.com/attachments/1184080976071110758/1191943034619826286/dreamsumi_lion_face_in_rainforest_growling_with_powerful_mood_i_98e07e27-d48e-47ce-a7c8-da024f78154c.png?ex=65a74674&is=6594d174&hm=3341caac401da0dd62baba62f5d46a0c9b10ede6b42689a3819002d8c02dfbd5&"
+  },
+  {
+   "id": 12,
+   "subject": "girl",
+   "action": "holding drink",
+   "location": "nightclub",
+   "mood": "candid",
+   "art_style": "Polaroid",
+   "aspect": "100:141",
+   "background": "https://cdn.discordapp.com/attachments/1184080976071110758/1191934605947830372/dreamsumi_girl_at_nightclub_holding_drink_in_polaroid_style_e783a869-2953-4f31-b65f-895bba28d2bf.png?ex=65a73e9b&is=6594c99b&hm=0301638efa18c150e5d591bf8fcf227a5e4a2bc6457e2a7cc93c09e8751c6c07&",
+   "link": "https://www.midjourney.com/jobs/e783a869-2953-4f31-b65f-895bba28d2bf"
+  },
+  {
+   "id": 13,
+   "subject": "painting of lady wearing flowing robes",
+   "action": "with roses on floor",
+   "location": "cathedral",
+   "mood": "vivid colours",
+   "version": 5,
+   "art_style": "Art Nouveau",
+   "aspect": "100:141",
+   "link": "https://cdn.midjourney.com/f94980a1-d6d0-412e-9c83-6e3754ef778c/0_0.webp",
+   "background": "https://media.discordapp.net/attachments/1184080976071110758/1191941888186523648/dreamsumi_painting_of_lady_wearing_flowing_robes_in_cathedral_w_f94980a1-d6d0-412e-9c83-6e3754ef778c.png?ex=65a74563&is=6594d063&hm=f515a23dfd69b549670a407341ba89df2d3d338fc5873cc2b2257104931c6559&=&format=webp&quality=lossless&width=474&height=671"
+  },
+  {
+   "id": 14,
+   "subject": "chinese junk boat",
+   "action": "sailing",
+   "location": "hong kong victoria harbour",
+   "mood": "misty, firewatch inspired, bold clean lines, minimalistic, indigo skies",
+   "version": 5,
+   "art_style": "Oly Moss",
+   "aspect": "100:141",
+   "background": "https://cdn.discordapp.com/attachments/1184080976071110758/1191965890418323466/dreamsumi_chinese_junk_boat_sailing_in_hong_kong_victoria_harbo_77a35e4c-5027-4458-91cd-5f949e00228d.png?ex=65a75bbd&is=6594e6bd&hm=e1633d879b1e9a58857f688339c9a8a2985175da30431c7d99cade3d7a57fcd8&"
+  },
+  {
+   "id": 15,
+   "subject": "bizarre creatures",
+   "action": "floating",
+   "location": "mushroom islands",
+   "mood": "Intricate details, vibrant colours, dreamlike scene, distorted perspectives",
+   "art_style": "Surrealist painting, Savador Dali, Max Ernst",
+   "aspect": "100:141",
+   "link": "https://www.midjourney.com/jobs/e979b81b-fc8a-4c1a-a81c-201180e1566d",
+   "background": "https://cdn.discordapp.com/attachments/1184080976071110758/1191978210481688637/dreamsumi_A_surrealist_painting_that_depicts_a_dreamlike_scene__e979b81b-fc8a-4c1a-a81c-201180e1566d.png?ex=65a76737&is=6594f237&hm=39671bdc7f611d40ebb8c53ae3ac70f304622703743023ab0c3353d063362da1&"
+  },
+  {
+   "id": 16,
+   "subject": "ballet dancer",
+   "action": "mid leap",
+   "location": "city rooftop",
+   "mood": "at dusk, capturing movement, graceful, urban environment",
+   "art_style": "dynamic composition",
+   "aspect": "100:141",
+   "link": "https://www.midjourney.com/jobs/28482bc6-d945-415c-9875-f82b29931e19?index=0",
+   "background": "https://cdn.discordapp.com/attachments/1184080976071110758/1191979765318565969/dreamsumi_An_action_shot_of_a_professional_ballet_dancer_mid-le_28482bc6-d945-415c-9875-f82b29931e19.png?ex=65a768a9&is=6594f3a9&hm=7450876dc51142f7842ef2086a1f1947b168f77f511aeb9febca8ebc6a9c77fb&"
+  },
+  {
+   "id": 17,
+   "subject": "intricate spaceships laser beams and explosions",
+   "action": "battle scene",
+   "location": "space",
+   "mood": "epic scale, action",
+   "art_style": "star wars digital painting",
+   "aspect": "100:100",
+   "link": "https://www.midjourney.com/jobs/ddd8a7bf-7e43-41fc-be17-19de85cc4a7a?index=0",
+   "background": "https://cdn.discordapp.com/attachments/1184080976071110758/1191982259692113980/dreamsumi_A_digital_painting_of_a_space_battle_scene_with_intri_ddd8a7bf-7e43-41fc-be17-19de85cc4a7a.png?ex=65a76afc&is=6594f5fc&hm=2dacf6e33aeaa1f0c0cb2d576a1c640497b56806d60a6489ba834fe511128f8f&"
+  },
+  {
+   "id": 18,
+   "subject": "cat wearing gold chain and glasses",
+   "location": "stacks of money in background",
+   "mood": "--style scenic",
+   "version": "niji 5",
+   "art_style": "anime",
+   "aspect": "100:100",
+   "background": "https://media.discordapp.net/attachments/1184080976071110758/1191982015772360744/dreamsumi_cat_wearing_gold_chain_and_glasses_with_stacks_of_mon_cedf47ad-8b7b-44bd-a8c9-8b949beab222.png?ex=65a76ac2&is=6594f5c2&hm=cdf585a4928daa46172e8cb91d8ff495a1396cb19ecd6dc8309b0f3c1822d9ab&=&format=webp&quality=lossless&width=671&height=671",
+   "link": "https://www.midjourney.com/jobs/cedf47ad-8b7b-44bd-a8c9-8b949beab222?index=0"
+  },
+  {
+   "id": 19,
+   "subject": "cat wearing large gold chain",
+   "mood": "--style cute",
+   "version": "niji 5",
+   "art_style": "anime",
+   "aspect": "100:100",
+   "background": "https://media.discordapp.net/attachments/1184080976071110758/1191982725603795085/dreamsumi_cat_wearing_large_gold_chain_3dd363d0-afe1-4a1b-9a4e-dc8ea748c420.png?ex=65a76b6b&is=6594f66b&hm=7b78a118b313755ee07ce0f2bd0379a73955bcb4a59e78f2304f3ab146b46808&=&format=webp&quality=lossless&width=671&height=671"
+  },
+  {
+   "id": 20,
+   "subject": "pepe meme frog",
+   "action": "wearing 3 large gold chains",
+   "location": "stockmarket",
+   "mood": "minimal details",
+   "version": 6,
+   "art_style": "cartoon art_style",
+   "aspect": "100:100",
+   "background": "https://cdn.discordapp.com/attachments/1184080976071110758/1191985147885650000/dreamsumi_pepe_meme_frog_wearing_3_large_gold_chains_with_stock_5c0917e4-3071-4723-807b-a86808d1c76e.png?ex=65a76dad&is=6594f8ad&hm=0d293b904d432fa54760ad48962c0e1da4bea2394e6ec697548bacabfa58e040&",
+   "link": "https://www.midjourney.com/app/jobs/5c0917e4-3071-4723-807b-a86808d1c76e/"
+  },
+  {
+   "id": 21,
+   "subject": "orange cat",
+   "action": "sleeping peacefully",
+   "location": "bed of flowers",
+   "mood": "soft",
+   "version": 6,
+   "art_style": "Miyazaki Hayao",
+   "aspect": "100:100",
+   "link": "https://www.midjourney.com/jobs/beb7f924-fd8e-45f0-84ee-d9f31943b2e7",
+   "background": "https://cdn.discordapp.com/attachments/1184080976071110758/1191986262916210728/dreamsumi_A_soft_orange_cat_Sleeping_peacefully_in_a_bed_of_flo_beb7f924-fd8e-45f0-84ee-d9f31943b2e7.png?ex=65a76eb7&is=6594f9b7&hm=4d75ffeb2e221e75aeb07148719ab736e2fb928defed8afd8a5c4394103d7f0e&"
+  },
+  {
+   "id": 22,
+   "subject": "colour houses, boats and flowers",
+   "action": "calm bright day",
+   "location": "in harbour of french landscape",
+   "mood": "light orange and azure, wide angle, light yellow and dark crimson",
+   "art_style": "flat vector art illustration, travel poster",
+   "aspect": "100:100",
+   "link": "https://www.midjourney.com/jobs/1a6c4fdf-5d9d-41c5-9aa0-25baca7bee90?index=0",
+   "background": "https://cdn.discordapp.com/attachments/1184080976071110758/1191988478871879700/dreamsumi_Flat_vector_art_illustration_travel_poster_of_a_row_o_1a6c4fdf-5d9d-41c5-9aa0-25baca7bee90.png?ex=65a770c7&is=6594fbc7&hm=c4ed03ef4e53b84a1f67add1f80cb1c142747c494ef8949cad04615544cc3b0a&"
+  },
+  {
+   "id": 24,
+   "subject": "mushroom space city",
+   "mood": "trippy, dmt, flat style, 70s",
+   "art_style": "psychedelic",
+   "aspect": "100:100",
+   "background": "https://media.discordapp.net/attachments/1184080976071110758/1191989193002463232/dreamsumi_mushroom_space_city_trippy_dmt_flat_style_psychedelic_12d0cfd1-345d-4ea4-9b9b-290ebe4f931d.png?ex=65a77171&is=6594fc71&hm=7ad5670d5e6a46737ea83ce18e4f5fd3949aaa936a2482f03062f3b2d04ed2a9&=&format=webp&quality=lossless&width=671&height=671",
+   "link": "https://www.midjourney.com/jobs/12d0cfd1-345d-4ea4-9b9b-290ebe4f931d?index=0"
+  },
+  {
+   "id": 25,
+   "subject": "bitcoin in 2052",
+   "aspect": "100:100",
+   "link": "https://www.midjourney.com/jobs/ac0069b2-8b9d-41c6-a083-9df7f53be4be?index=0",
+   "background": "https://cdn.discordapp.com/attachments/1184080976071110758/1191994540610043955/dreamsumi_bitcoin_in_2052_ac0069b2-8b9d-41c6-a083-9df7f53be4be.png?ex=65a7766c&is=6595016c&hm=29adad1c33e399b1a2b3a958887aa9feb257a24c6b694d43afc5fef76c05e651&"
+  }
+ ]

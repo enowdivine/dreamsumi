@@ -1,0 +1,25 @@
+.wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content h1 {
+    font-size: 200px;
+}
+
+
+.content p {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.content a {
+    background-color: #373196;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    padding: 15px 40px;
+}

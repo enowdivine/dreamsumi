@@ -1,0 +1,85 @@
+.contentWrapper {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.content {
+    width: 75%;
+    display: flex;
+    padding-top: 30px;
+}
+
+.formSection {
+    width: 30%;
+}
+
+.form {
+    border: 1px solid white;
+    border-radius: 10px;
+    min-height: 80vh;
+    padding: 30px;
+}
+
+.inputDiv {
+    margin-bottom: 15px;
+}
+
+.inputDiv select {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border-radius: 5px;
+    margin: 0;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+.inputDiv select::-ms-expand {
+    display: none;
+}
+
+.infoMt {
+    text-align: left;
+}
+
+.danger {
+    font-size: 15px;
+    color: red;
+}
+
+.inputDiv p {
+    margin: 0;
+    text-align: left;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+
+.displaySection {
+    width: 60%;
+    margin-left: 20px;
+}
+
+.displaySection .image {
+    width: 545px;
+    margin: auto;
+}
+
+.btns {
+    width: 60%;
+    margin: auto;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btns a {
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 5px;
+    font-size: 12px;
+}

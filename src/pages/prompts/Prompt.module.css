@@ -29,3 +29,8 @@
     background-color: #fff;
     color: black;
 }
+
+.btnDiv button:disabled {
+    color: #ccc;
+    border: 1px solid #ccc;
+}

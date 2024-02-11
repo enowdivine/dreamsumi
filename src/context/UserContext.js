@@ -7,7 +7,7 @@ export const UserContext = createContext();
 export default ({ children }) => {
     const [userToken, setUserToken] = useState("");
     const [authenticated, setAuthenticated] = useState(false);
-    // 
+
     const [dreamObject, setDreamObject] = useState("")
     const [dreamLocation, setDreamLocation] = useState("")
     const [dreamAction, setDreamAction] = useState("")
@@ -15,6 +15,11 @@ export default ({ children }) => {
     const [aspectRatio, setAspectRatio] = useState("")
     const [generatedPrompt, setGeneratedPrompt] = useState("")
     const [artStyle, setArtStyle] = useState("")
+
+    const [generatingImage, setGeneratingImage] = useState(false)
+
+    const [selectedImage, setSelectedImage] = useState("")
+
 
 
     // const { stateUser } = useSelector((state) => ({
@@ -78,7 +83,13 @@ export default ({ children }) => {
                 setDreamMode,
                 setAspectRatio,
                 setGeneratedPrompt,
-                setArtStyle
+                setArtStyle,
+
+                generatingImage,
+                setGeneratingImage,
+
+                selectedImage,
+                setSelectedImage
             }}
         >
             {children}

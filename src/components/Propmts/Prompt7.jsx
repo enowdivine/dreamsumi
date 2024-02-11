@@ -1,29 +1,61 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import styles from "./Styles.module.css";
+import artStyles from "../../data/artStyles/styles.json";
 import { UserContext } from "../../context/UserContext";
+import { ThreeCircles } from "react-loader-spinner";
+import { useNavigate } from "react-router-dom";
 
-const Prompt1 = () => {
-  const { artStyle, setArtStyle } = useContext(UserContext);
+const Prompt1 = ({ Loading, SetLoading }) => {
+  const navigate = useNavigate();
+  const { artStyle, setArtStyle, setGeneratingImage } = useContext(UserContext);
 
+  useEffect(() => {
+    setTimeout(() => {
+      navigate("/refine-image");
+    }, 5000);
+  }, []);
   return (
     <div className={styles.content}>
-      <div>
-        <h3>Choose Art Style</h3>
-      </div>
-      <div className={styles.inputDiv}>
-        <input type="text" placeholder="Write your dream ..." />
-      </div>
-      <div className={styles.tips}>
-        <p>
-          Tips: Consider the main focus of your artwork. If it's a nature scene,
-          think about trees, mountains, or animals. For a portrait, decide on
-          the person or object you want to emphasize.
-        </p>
-        <p>
-          Try and be as specific if you can. Eg. “An orange british short hair
-          cat” instead of just “cat”
-        </p>
-      </div>
+      {Loading ? (
+        <div className={styles.Loader}>
+          <h3>Generating Image...</h3>
+          <div>
+            <ThreeCircles
+              height="100"
+              width="100"
+              color="#fff"
+              wrapperStyle={{}}
+              wrapperClass=""
+              visible={true}
+              ariaLabel="three-circles-rotating"
+              outerCircleColor=""
+              innerCircleColor=""
+              middleCircleColor=""
+            />
+          </div>
+        </div>
+      ) : (
+        <>
+          <div>
+            <h3>Choose Art Style</h3>
+          </div>
+          <div className={styles.artStyles}>
+            {artStyles.map((style, index) => (
+              <div
+                onClick={() => setArtStyle(style.label)}
+                key={index}
+                style={{
+                  // backgroundImage: `url(${style.image})`,
+                  opacity: artStyle === style.label ? 0.2 : 0.8,
+                }}
+                className={styles.artStyle}
+              >
+                {style.label}
+              </div>
+            ))}
+          </div>
+        </>
+      )}
     </div>
   );
 };

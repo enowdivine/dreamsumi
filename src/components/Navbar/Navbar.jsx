@@ -2,6 +2,7 @@ import React from "react";
 import { AiOutlineUser } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import styles from "./Navbar.module.css";
+import Dropdown from "../Dropdown/Dropdown";
 
 const Navbar = () => {
   return (
@@ -14,7 +15,7 @@ const Navbar = () => {
           <Link to="/how-it-works">How it works</Link>
         </div>
         <div className={styles.profileImg}>
-          <AiOutlineUser size={20} color="black" />
+          <Dropdown />
         </div>
         <div>
           <Link to="#">Credits:</Link>

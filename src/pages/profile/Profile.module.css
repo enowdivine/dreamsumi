@@ -1,0 +1,39 @@
+.contentWrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content {
+    width: 50%;
+    padding-top: 80px;
+}
+
+.content form {
+    text-align: left;
+}
+
+.inputDiv input {
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    outline: none;
+    margin-bottom: 20px;
+}
+
+.inputDiv label {
+    color: #515151;
+    margin-bottom: 5px;
+}
+
+.content form button {
+    background-color: #373196;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 25px;
+}

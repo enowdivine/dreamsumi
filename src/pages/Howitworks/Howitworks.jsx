@@ -73,7 +73,7 @@ const Howitworks = () => {
               </div>
               <div>
                 <h3>Our Socials</h3>
-                <CiFacebook size={25} />
+                <CiFacebook size={30} />
                 <FaXTwitter
                   size={25}
                   style={{

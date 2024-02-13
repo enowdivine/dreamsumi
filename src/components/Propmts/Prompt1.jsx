@@ -1,9 +1,14 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import styles from "./Styles.module.css";
 import { UserContext } from "../../context/UserContext";
 
 const Prompt1 = () => {
-  const { dreamObject, setDreamObject } = useContext(UserContext);
+  const { dreamObject, setDreamObject, setGeneratingImage } =
+    useContext(UserContext);
+
+  useEffect(() => {
+    setGeneratingImage(false);
+  }, []);
   return (
     <div className={styles.content}>
       <div>

@@ -90,7 +90,7 @@ const Checkout = () => {
                       </select>
                     </div>
                     <div>
-                      <label>Zip or Postal Code</label>
+                      <label>SKU</label>
                       <div className={styles.SKU}>GLOBAL-CFPM-A4</div>
                     </div>
                   </div>

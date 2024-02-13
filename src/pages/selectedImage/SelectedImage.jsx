@@ -17,7 +17,7 @@ const SelectedImage = () => {
         <div className={styles.content}>
           <h3>Selected Image</h3>
           <div className={styles.imgDiv}>
-            <img src={image} />
+            <img src={image} alt="" />
           </div>
           <div className={styles.btns}>
             <Link to={"/refine-image"}>Go Back</Link>

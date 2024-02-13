@@ -1,13 +1,16 @@
 import React, { createContext, useState, useEffect } from "react";
-// import { useSelector } from "react-redux";
-// import { isExpired, decodeToken } from "react-jwt";
+import { decodeToken } from "react-jwt";
 
 export const UserContext = createContext();
 
 export default ({ children }) => {
+    const [userId, setUserId] = useState("");
     const [userToken, setUserToken] = useState("");
+    const [userCredit, setUserCredit] = useState("");
+    const [userEmail, setUserEmail] = useState("");
     const [authenticated, setAuthenticated] = useState(false);
 
+    const [dream, setDream] = useState("")
     const [dreamObject, setDreamObject] = useState("")
     const [dreamLocation, setDreamLocation] = useState("")
     const [dreamAction, setDreamAction] = useState("")
@@ -20,55 +23,36 @@ export default ({ children }) => {
 
     const [selectedImage, setSelectedImage] = useState("")
 
+    const token = localStorage.getItem("dreamsumiai-user");
+    const credit = localStorage.getItem("dreamsumiai-usercredit")
 
-
-    // const { stateUser } = useSelector((state) => ({
-    //     user: state.auth.user,
-    // }));
-    // const user = localStorage.getItem("deonicode-user");
-    // //
-    // const { discount } = useSelector((state) => ({
-    //     discount: state.discount.discount,
-    // }));
-    // const localDiscount = JSON.parse(
-    //     localStorage.getItem("deonicode-discount-token")
-    // );
-    // const discountToken = localDiscount?.token;
-
-    // useEffect(() => {
-    //     if (stateUser || user) {
-    //         const decodedToken = decodeToken(stateUser || user);
-    //         if (decodedToken != null) {
-    //             setUserId(decodedToken.id);
-    //             setUsername(decodedToken.username);
-    //             setUseremail(decodedToken.email);
-    //             setAuthenticated(true);
-    //         }
-    //     }
-    // }, [user]);
-
-    // useEffect(() => {
-    //     if (discount || discountToken) {
-    //         const decodedToken = decodeToken(discountToken || discount?.token);
-    //         const isMyTokenExpired = isExpired(discountToken || discount?.token);
-    //         setExpiredToken(isMyTokenExpired);
-    //         if (!isMyTokenExpired) {
-    //             setDiscountId(localDiscount?._id);
-    //             setDiscountAmount(decodedToken.amount);
-    //             setExpiryDate(new Date(decodedToken.expiryDate));
-    //         }
-    //     }
-    // }, [discount, discountToken]);
+    useEffect(() => {
+        if (token) {
+            const decodedToken = decodeToken(token);
+            setUserId(decodedToken?.id);
+            setUserToken(JSON.parse(token))
+            setUserCredit(credit)
+            setUserEmail(decodedToken?.email)
+            setAuthenticated(true);
+        }
+    }, [token, credit]);
 
     return (
         <UserContext.Provider
             value={{
+                userId,
+                setUserId,
+
+                userEmail,
+                setUserEmail,
+
                 userToken,
                 authenticated,
 
                 setUserToken,
                 setAuthenticated,
 
+                dream,
                 dreamObject,
                 dreamLocation,
                 dreamAction,
@@ -77,6 +61,7 @@ export default ({ children }) => {
                 generatedPrompt,
                 artStyle,
 
+                setDream,
                 setDreamObject,
                 setDreamLocation,
                 setDreamAction,
@@ -89,7 +74,10 @@ export default ({ children }) => {
                 setGeneratingImage,
 
                 selectedImage,
-                setSelectedImage
+                setSelectedImage,
+
+                userCredit,
+                setUserCredit
             }}
         >
             {children}

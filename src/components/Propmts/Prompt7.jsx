@@ -1,19 +1,12 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import styles from "./Styles.module.css";
 import artStyles from "../../data/artStyles/styles.json";
 import { UserContext } from "../../context/UserContext";
 import { ThreeCircles } from "react-loader-spinner";
-import { useNavigate } from "react-router-dom";
 
-const Prompt1 = ({ Loading, SetLoading }) => {
-  const navigate = useNavigate();
-  const { artStyle, setArtStyle, setGeneratingImage } = useContext(UserContext);
+const Prompt1 = ({ Loading }) => {
+  const { artStyle, setArtStyle } = useContext(UserContext);
 
-  useEffect(() => {
-    setTimeout(() => {
-      navigate("/refine-image");
-    }, 5000);
-  }, []);
   return (
     <div className={styles.content}>
       {Loading ? (

@@ -1,5 +1,6 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Toaster } from 'react-hot-toast';
 import Homepage from './pages/homepage/Homepage';
 import Dreams from './pages/dreams/Dreams';
 import Signup from './pages/Auth/Signup/Signup';
@@ -39,6 +40,7 @@ function App() {
           <Route path="*" element={<PageError />} />
         </Routes>
       </Router>
+      <Toaster />
     </div>
   );
 }

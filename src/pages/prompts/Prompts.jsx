@@ -42,6 +42,12 @@ const Prompts = () => {
     setCount(count - 1);
   };
 
+  const generateImage = () => {
+    setTimeout(() => {
+      navigate("/refine-image");
+    }, 5000);
+  };
+
   return (
     <div>
       <Navbar />
@@ -76,6 +82,7 @@ const Prompts = () => {
                 if (count === 6) {
                   setLoading(true);
                   setGeneratingImage(true);
+                  generateImage();
                   return;
                 }
                 incrementCount();

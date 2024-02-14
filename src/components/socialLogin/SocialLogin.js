@@ -39,7 +39,7 @@ const SocialLogin = ({ text }) => {
                     onLogoutSuccess={onLogoutSuccess}
                     redirect_uri={REDIRECT_URI}
                     onResolve={({ provider, data }) => {
-                        localStorage.setItem(JSON.stringify({ provider, data }))
+                        localStorage.setItem("data", JSON.stringify({ provider, data }))
                         setProvider(provider);
                         setProfile(data);
                     }}
@@ -60,7 +60,7 @@ const SocialLogin = ({ text }) => {
                     discoveryDocs="claims_supported"
                     access_type="offline"
                     onResolve={({ provider, data }) => {
-                        localStorage.setItem(JSON.stringify({ provider, data }))
+                        localStorage.setItem("data", JSON.stringify({ provider, data }))
                         setProvider(provider);
                         setProfile(data);
                     }}

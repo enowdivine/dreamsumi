@@ -31,7 +31,7 @@ const SocialLogin = ({ text }) => {
         <div className={styles.loginContainer}>
             <div className={styles.facebook}>
                 <LoginSocialFacebook
-                    appId={process.env.REACT_APP_FB_APP_ID || 1128586324707059}
+                    appId={process.env.REACT_APP_FB_APP_ID || "1556270135133846"}
                     fieldsProfile={
                         'id,first_name,last_name,middle_name,name,name_format,picture,short_name,email,gender'
                     }

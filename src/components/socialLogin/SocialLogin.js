@@ -9,8 +9,6 @@ import styles from './styles.module.css';
 const SocialLogin = ({ text }) => {
     const [provider, setProvider] = useState('');
     const [profile, setProfile] = useState(null);
-    // console.log(provider)
-    // console.log(profile)
 
     const onLoginStart = useCallback(() => {
         alert('login start');

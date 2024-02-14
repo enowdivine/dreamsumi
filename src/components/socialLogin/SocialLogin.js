@@ -32,13 +32,14 @@ const SocialLogin = ({ text }) => {
             <div className={styles.facebook}>
                 <LoginSocialFacebook
                     appId={process.env.REACT_APP_FB_APP_ID || "1556270135133846"}
-                    fieldsProfile={
-                        'id,first_name,last_name,middle_name,name,name_format,picture,short_name,email,gender'
-                    }
+                    // fieldsProfile={
+                    //     'id,first_name,last_name,middle_name,name,name_format,picture,short_name,email,gender'
+                    // }
                     onLoginStart={onLoginStart}
                     onLogoutSuccess={onLogoutSuccess}
-                    redirect_uri={REDIRECT_URI}
+                    // redirect_uri={REDIRECT_URI}
                     onResolve={({ provider, data }) => {
+                        console.log("completed")
                         localStorage.setItem("data", JSON.stringify({ provider, data }))
                         setProvider(provider);
                         setProfile(data);
@@ -55,11 +56,12 @@ const SocialLogin = ({ text }) => {
                 <LoginSocialGoogle
                     client_id={process.env.REACT_APP_GG_APP_ID || "574116481630-sltoijl2j2cigt5htcm30gpv51oat5ab.apps.googleusercontent.com"}
                     onLoginStart={onLoginStart}
-                    redirect_uri={REDIRECT_URI}
-                    scope="openid profile email"
-                    discoveryDocs="claims_supported"
-                    access_type="offline"
+                    // redirect_uri={REDIRECT_URI}
+                    // scope="openid profile email"
+                    // discoveryDocs="claims_supported"
+                    // access_type="offline"
                     onResolve={({ provider, data }) => {
+                        console.log("completed")
                         localStorage.setItem("data", JSON.stringify({ provider, data }))
                         setProvider(provider);
                         setProfile(data);

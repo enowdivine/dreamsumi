@@ -60,6 +60,7 @@ const Login = () => {
           <input
             type="password"
             placeholder="Password"
+            autoComplete={true}
             onChange={(e) => setPassword(e.target.value)}
           />
           <button onClick={(e) => handleLogin(e)} disabled={loading}>

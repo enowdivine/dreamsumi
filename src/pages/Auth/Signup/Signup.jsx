@@ -63,11 +63,13 @@ const Signup = () => {
           <input
             type="password"
             placeholder="Password"
+            autoComplete={true}
             onChange={(e) => setPassword(e.target.value)}
           />
           <input
             type="password"
             placeholder="Confirm Password"
+            autoComplete={true}
             onChange={(e) => setConfirmPassword(e.target.value)}
           />
           <button onClick={(e) => handleSignup(e)} disabled={loading}>

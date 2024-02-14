@@ -25,7 +25,7 @@ const SocialLogin = ({ text }) => {
     const onLogout = useCallback(() => { }, []);
 
     const REDIRECT_URI =
-        'http://localhost:3000/account/login';
+        'https://dreamsumiai.netlify.app/login';
 
     return (
         <div className={styles.loginContainer}>

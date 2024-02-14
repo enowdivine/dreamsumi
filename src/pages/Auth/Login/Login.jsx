@@ -6,6 +6,7 @@ import toast from "react-hot-toast";
 import { login } from "../../../store/reducers/auth";
 import { UserContext } from "../../../context/UserContext";
 import { useDispatch } from "react-redux";
+import SocialLogin from "../../../components/socialLogin/SocialLogin";
 
 const Login = () => {
   const { setUserToken, setAuthenticated, setUserCredit } =
@@ -64,6 +65,8 @@ const Login = () => {
           <button onClick={(e) => handleLogin(e)} disabled={loading}>
             {loading ? "Loading..." : "Confirm"}
           </button>
+          <div className={styles.OR}>OR</div>
+          <SocialLogin text={"Login"} />
           <div>
             <p>Don't have an account?</p>
             <Link to="/signup">Sign Up</Link>

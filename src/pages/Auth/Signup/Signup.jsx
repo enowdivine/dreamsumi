@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import { signup } from "../../../store/reducers/auth";
 import { useDispatch } from "react-redux";
+import SocialLogin from "../../../components/socialLogin/SocialLogin";
 
 const Signup = () => {
   const [loading, setLoading] = useState(false);
@@ -72,6 +73,8 @@ const Signup = () => {
           <button onClick={(e) => handleSignup(e)} disabled={loading}>
             {loading ? "Loading..." : "Confirm"}
           </button>
+          <div className={styles.OR}>OR</div>
+          <SocialLogin text={"Signup"} />
           <div>
             <p>Already have an account?</p>
             <Link to="/login">Login</Link>

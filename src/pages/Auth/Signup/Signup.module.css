@@ -6,7 +6,6 @@
 }
 
 .contentWrapper form {
-    /* background-color: #fff; */
     background-color: transparent;
     border: 1px solid #ccc;
     border-radius: 10px;
@@ -48,4 +47,10 @@
     text-decoration: none;
     color: #373196;
     margin-left: 10px;
+}
+
+.OR {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
 }

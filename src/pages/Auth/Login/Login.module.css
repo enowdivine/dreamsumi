@@ -51,3 +51,9 @@
     color: #373196;
     margin-left: 10px;
 }
+
+.OR {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}

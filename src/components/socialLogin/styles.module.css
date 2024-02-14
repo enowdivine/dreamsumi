@@ -1,0 +1,22 @@
+.loginContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.loginContainer .facebookLogin,
+.loginContainer .googleLogin {
+    margin: 0;
+    width: 408px !important;
+    margin-top: -30px;
+}
+
+.facebookLogin {
+
+    font-weight: bold;
+}
+
+.googleLogin {
+    background-color: whitesmoke !important;
+    color: black !important;
+    font-weight: bold;
+}

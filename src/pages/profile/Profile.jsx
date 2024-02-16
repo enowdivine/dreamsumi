@@ -19,17 +19,45 @@ const Profile = () => {
   const updateUser = async (e) => {
     e.preventDefault();
     try {
-      if (email && password && newPassword && confirmPassword) {
-        if (newPassword === confirmPassword) {
+      if (email) {
+        if (password || newPassword || confirmPassword) {
+          if (password === "" || newPassword === "" || confirmPassword === "") {
+            toast.error("All field are require");
+            return;
+          }
+          if (newPassword === confirmPassword) {
+            setLoading(true);
+            await dispatch(
+              updateDetails({
+                id: userId,
+                email,
+                userToken,
+                newPassword,
+                oldPassword: password,
+                updatePassword: confirmPassword,
+              })
+            ).then((res) => {
+              if (res.meta.requestStatus === "rejected") {
+                toast.error(res.payload);
+                setLoading(false);
+                return;
+              } else {
+                toast.success(res.payload.message);
+                setLoading(false);
+                return;
+              }
+            });
+          } else {
+            toast.error("passwords do not match");
+            return;
+          }
+        } else {
           setLoading(true);
           await dispatch(
             updateDetails({
               id: userId,
               email,
               userToken,
-              newPassword,
-              oldPassword: password,
-              updatePassword: confirmPassword,
             })
           ).then((res) => {
             if (res.meta.requestStatus === "rejected") {
@@ -42,12 +70,9 @@ const Profile = () => {
               return;
             }
           });
-        } else {
-          toast.error("passwords do not match");
-          return;
         }
       } else {
-        toast.error("all field are required");
+        toast.error("email is required");
         setLoading(false);
         return;
       }

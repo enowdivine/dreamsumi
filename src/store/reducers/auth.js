@@ -85,31 +85,6 @@ export const updateDetails = createAsyncThunk(
     }
 )
 
-// export const updatePassword = createAsyncThunk(
-//     "teachers/updatePassword",
-//     async (data, thunkAPI) => {
-//         try {
-//             const response = await axios.put(
-//                 `${url}/update-password/${data.id}`,
-//                 data.values,
-//                 {
-//                     headers: {
-//                         Authorization: `Bearer ${userToken}`,
-//                         "Content-Type": "application/json",
-//                     },
-//                 }
-//             )
-//             return response.data
-//         } catch (error) {
-//             const message =
-//                 (error.message && error.response.data && error.response.data.message) ||
-//                 error.message ||
-//                 error.toString()
-//             return thunkAPI.rejectWithValue(message)
-//         }
-//     }
-// )
-
 export const authSlice = createSlice({
     name: "auth",
     initialState,

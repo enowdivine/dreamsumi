@@ -1,5 +1,15 @@
-.tableContainer {
-    margin: 20px;
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.table-container {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
 }
 
 .filterInput {
@@ -18,14 +28,50 @@
 
 .table th,
 .table td {
-    border: 1px solid #ccc;
     padding: 8px;
+    text-align: left;
+    color: #fff;
+    border-bottom: 1px solid #ddd;
+    cursor: pointer;
 }
 
-.rowEven {
-    background-color: transparent;
+.table tr {
+    padding: 100px;
+
 }
 
-.rowOdd {
-    background-color: transparent;
+.table th {
+    background-color: #555;
+}
+
+.table tbody tr:hover {
+    background-color: #666;
+}
+
+.pagination {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.pagination ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+}
+
+.pagination li {
+    cursor: pointer;
+    padding: 5px 10px;
+    margin: 0 5px;
+    background-color: #555;
+}
+
+.pagination li.active {
+    background-color: #666;
+}
+
+.table-container img {
+    height: 40px;
+    width: 40px;
 }

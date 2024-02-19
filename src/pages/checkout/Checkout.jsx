@@ -129,7 +129,7 @@ const Checkout = () => {
           setLoading(false);
           return;
         }
-        if (!res.payload.result) {
+        if (!res.payload._result) {
           setLoading(false);
           return toast.error("Something went wrong!");
         }

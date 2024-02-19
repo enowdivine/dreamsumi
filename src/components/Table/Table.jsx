@@ -3,28 +3,53 @@ import styles from "./Table.module.css";
 import { useDispatch } from "react-redux";
 import { getOrders } from "../../store/reducers/prodigi";
 import { ThreeCircles } from "react-loader-spinner";
+import { formatDate } from "../../helpers/formatDate";
 
 function TableComponent() {
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(false);
   const [orders, setOrders] = useState([]);
-  console.log(orders);
+  const [filteredOrders, setFilteredOrders] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [currentPage, setCurrentPage] = useState(1);
+  const [itemsPerPage] = useState(2);
 
   const getOrdersHandler = async () => {
     try {
       setLoading(true);
       await dispatch(getOrders()).then((res) => {
-        console.log(res);
         setOrders(res.payload.orders);
         setLoading(false);
+        return;
       });
     } catch (error) {
       console.error(error);
+      setLoading(false);
     }
   };
   useEffect(() => {
     getOrdersHandler();
-  }, [getOrdersHandler]);
+  }, []);
+
+  const indexOfLastItem = currentPage * itemsPerPage;
+  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
+  const currentItems = orders.slice(indexOfFirstItem, indexOfLastItem);
+
+  const paginate = (pageNumber) => {
+    setCurrentPage(pageNumber);
+  };
+
+  const handleSearch = (event) => {
+    setSearchTerm(event.target.value);
+    let orderss = orders.filter((item) =>
+      item.shipments[0]?.status
+        .toLowerCase()
+        .includes(event.target.value.toLowerCase())
+    );
+    setFilteredOrders(orderss);
+    setCurrentPage(1);
+  };
+
   return (
     <div className={styles.tableContainer}>
       {loading ? (
@@ -46,8 +71,10 @@ function TableComponent() {
         <div>
           <input
             type="text"
-            placeholder="Filter..."
+            placeholder="Filter by status..."
             className={styles.filterInput}
+            value={searchTerm}
+            onChange={handleSearch}
           />
           <table className={styles.table}>
             <thead>
@@ -57,354 +84,95 @@ function TableComponent() {
                 <th>Order</th>
                 <th>Customer</th>
                 <th>Date</th>
-                <th>Coples</th>
+                <th>Coplies</th>
                 <th>Total</th>
                 <th>Status</th>
               </tr>
             </thead>
             <tbody>
-              <tr className={styles.rowEven}>
-                <td>1</td>
-                <td>Data 1</td>
-                <td>Data 2</td>
-                <td>Data 3</td>
-                <td>Data 4</td>
-                <td>Data 5</td>
-                <td>Data 6</td>
-                <td>Data 7</td>
-              </tr>
-              <tr className={styles.rowOdd}>
-                <td>2</td>
-                <td>Data 7</td>
-                <td>Data 8</td>
-                <td>Data 9</td>
-                <td>Data 10</td>
-                <td>Data 11</td>
-                <td>Data 12</td>
-                <td>Data 13</td>
-              </tr>
-              <tr className={styles.rowEven}>
-                <td>1</td>
-                <td>Data 1</td>
-                <td>Data 2</td>
-                <td>Data 3</td>
-                <td>Data 4</td>
-                <td>Data 5</td>
-                <td>Data 6</td>
-                <td>Data 7</td>
-              </tr>
-              <tr className={styles.rowOdd}>
-                <td>2</td>
-                <td>Data 7</td>
-                <td>Data 8</td>
-                <td>Data 9</td>
-                <td>Data 10</td>
-                <td>Data 11</td>
-                <td>Data 12</td>
-                <td>Data 13</td>
-              </tr>{" "}
-              <tr className={styles.rowEven}>
-                <td>1</td>
-                <td>Data 1</td>
-                <td>Data 2</td>
-                <td>Data 3</td>
-                <td>Data 4</td>
-                <td>Data 5</td>
-                <td>Data 6</td>
-                <td>Data 7</td>
-              </tr>
-              <tr className={styles.rowOdd}>
-                <td>2</td>
-                <td>Data 7</td>
-                <td>Data 8</td>
-                <td>Data 9</td>
-                <td>Data 10</td>
-                <td>Data 11</td>
-                <td>Data 12</td>
-                <td>Data 13</td>
-              </tr>{" "}
-              <tr className={styles.rowEven}>
-                <td>1</td>
-                <td>Data 1</td>
-                <td>Data 2</td>
-                <td>Data 3</td>
-                <td>Data 4</td>
-                <td>Data 5</td>
-                <td>Data 6</td>
-                <td>Data 7</td>
-              </tr>
-              <tr className={styles.rowOdd}>
-                <td>2</td>
-                <td>Data 7</td>
-                <td>Data 8</td>
-                <td>Data 9</td>
-                <td>Data 10</td>
-                <td>Data 11</td>
-                <td>Data 12</td>
-                <td>Data 13</td>
-              </tr>{" "}
-              <tr className={styles.rowEven}>
-                <td>1</td>
-                <td>Data 1</td>
-                <td>Data 2</td>
-                <td>Data 3</td>
-                <td>Data 4</td>
-                <td>Data 5</td>
-                <td>Data 6</td>
-                <td>Data 7</td>
-              </tr>
-              <tr className={styles.rowOdd}>
-                <td>2</td>
-                <td>Data 7</td>
-                <td>Data 8</td>
-                <td>Data 9</td>
-                <td>Data 10</td>
-                <td>Data 11</td>
-                <td>Data 12</td>
-                <td>Data 13</td>
-              </tr>{" "}
-              <tr className={styles.rowEven}>
-                <td>1</td>
-                <td>Data 1</td>
-                <td>Data 2</td>
-                <td>Data 3</td>
-                <td>Data 4</td>
-                <td>Data 5</td>
-                <td>Data 6</td>
-                <td>Data 7</td>
-              </tr>
-              <tr className={styles.rowOdd}>
-                <td>2</td>
-                <td>Data 7</td>
-                <td>Data 8</td>
-                <td>Data 9</td>
-                <td>Data 10</td>
-                <td>Data 11</td>
-                <td>Data 12</td>
-                <td>Data 13</td>
-              </tr>{" "}
-              <tr className={styles.rowEven}>
-                <td>1</td>
-                <td>Data 1</td>
-                <td>Data 2</td>
-                <td>Data 3</td>
-                <td>Data 4</td>
-                <td>Data 5</td>
-                <td>Data 6</td>
-                <td>Data 7</td>
-              </tr>
-              <tr className={styles.rowOdd}>
-                <td>2</td>
-                <td>Data 7</td>
-                <td>Data 8</td>
-                <td>Data 9</td>
-                <td>Data 10</td>
-                <td>Data 11</td>
-                <td>Data 12</td>
-                <td>Data 13</td>
-              </tr>{" "}
-              <tr className={styles.rowEven}>
-                <td>1</td>
-                <td>Data 1</td>
-                <td>Data 2</td>
-                <td>Data 3</td>
-                <td>Data 4</td>
-                <td>Data 5</td>
-                <td>Data 6</td>
-                <td>Data 7</td>
-              </tr>
-              <tr className={styles.rowOdd}>
-                <td>2</td>
-                <td>Data 7</td>
-                <td>Data 8</td>
-                <td>Data 9</td>
-                <td>Data 10</td>
-                <td>Data 11</td>
-                <td>Data 12</td>
-                <td>Data 13</td>
-              </tr>{" "}
-              <tr className={styles.rowEven}>
-                <td>1</td>
-                <td>Data 1</td>
-                <td>Data 2</td>
-                <td>Data 3</td>
-                <td>Data 4</td>
-                <td>Data 5</td>
-                <td>Data 6</td>
-                <td>Data 7</td>
-              </tr>
-              <tr className={styles.rowOdd}>
-                <td>2</td>
-                <td>Data 7</td>
-                <td>Data 8</td>
-                <td>Data 9</td>
-                <td>Data 10</td>
-                <td>Data 11</td>
-                <td>Data 12</td>
-                <td>Data 13</td>
-              </tr>{" "}
-              <tr className={styles.rowEven}>
-                <td>1</td>
-                <td>Data 1</td>
-                <td>Data 2</td>
-                <td>Data 3</td>
-                <td>Data 4</td>
-                <td>Data 5</td>
-                <td>Data 6</td>
-                <td>Data 7</td>
-              </tr>
-              <tr className={styles.rowOdd}>
-                <td>2</td>
-                <td>Data 7</td>
-                <td>Data 8</td>
-                <td>Data 9</td>
-                <td>Data 10</td>
-                <td>Data 11</td>
-                <td>Data 12</td>
-                <td>Data 13</td>
-              </tr>{" "}
-              <tr className={styles.rowEven}>
-                <td>1</td>
-                <td>Data 1</td>
-                <td>Data 2</td>
-                <td>Data 3</td>
-                <td>Data 4</td>
-                <td>Data 5</td>
-                <td>Data 6</td>
-                <td>Data 7</td>
-              </tr>
-              <tr className={styles.rowOdd}>
-                <td>2</td>
-                <td>Data 7</td>
-                <td>Data 8</td>
-                <td>Data 9</td>
-                <td>Data 10</td>
-                <td>Data 11</td>
-                <td>Data 12</td>
-                <td>Data 13</td>
-              </tr>{" "}
-              <tr className={styles.rowEven}>
-                <td>1</td>
-                <td>Data 1</td>
-                <td>Data 2</td>
-                <td>Data 3</td>
-                <td>Data 4</td>
-                <td>Data 5</td>
-                <td>Data 6</td>
-                <td>Data 7</td>
-              </tr>
-              <tr className={styles.rowOdd}>
-                <td>2</td>
-                <td>Data 7</td>
-                <td>Data 8</td>
-                <td>Data 9</td>
-                <td>Data 10</td>
-                <td>Data 11</td>
-                <td>Data 12</td>
-                <td>Data 13</td>
-              </tr>{" "}
-              <tr className={styles.rowEven}>
-                <td>1</td>
-                <td>Data 1</td>
-                <td>Data 2</td>
-                <td>Data 3</td>
-                <td>Data 4</td>
-                <td>Data 5</td>
-                <td>Data 6</td>
-                <td>Data 7</td>
-              </tr>
-              <tr className={styles.rowOdd}>
-                <td>2</td>
-                <td>Data 7</td>
-                <td>Data 8</td>
-                <td>Data 9</td>
-                <td>Data 10</td>
-                <td>Data 11</td>
-                <td>Data 12</td>
-                <td>Data 13</td>
-              </tr>{" "}
-              <tr className={styles.rowEven}>
-                <td>1</td>
-                <td>Data 1</td>
-                <td>Data 2</td>
-                <td>Data 3</td>
-                <td>Data 4</td>
-                <td>Data 5</td>
-                <td>Data 6</td>
-                <td>Data 7</td>
-              </tr>
-              <tr className={styles.rowOdd}>
-                <td>2</td>
-                <td>Data 7</td>
-                <td>Data 8</td>
-                <td>Data 9</td>
-                <td>Data 10</td>
-                <td>Data 11</td>
-                <td>Data 12</td>
-                <td>Data 13</td>
-              </tr>{" "}
-              <tr className={styles.rowEven}>
-                <td>1</td>
-                <td>Data 1</td>
-                <td>Data 2</td>
-                <td>Data 3</td>
-                <td>Data 4</td>
-                <td>Data 5</td>
-                <td>Data 6</td>
-                <td>Data 7</td>
-              </tr>
-              <tr className={styles.rowOdd}>
-                <td>2</td>
-                <td>Data 7</td>
-                <td>Data 8</td>
-                <td>Data 9</td>
-                <td>Data 10</td>
-                <td>Data 11</td>
-                <td>Data 12</td>
-                <td>Data 13</td>
-              </tr>{" "}
-              <tr className={styles.rowEven}>
-                <td>1</td>
-                <td>Data 1</td>
-                <td>Data 2</td>
-                <td>Data 3</td>
-                <td>Data 4</td>
-                <td>Data 5</td>
-                <td>Data 6</td>
-                <td>Data 7</td>
-              </tr>
-              <tr className={styles.rowOdd}>
-                <td>2</td>
-                <td>Data 7</td>
-                <td>Data 8</td>
-                <td>Data 9</td>
-                <td>Data 10</td>
-                <td>Data 11</td>
-                <td>Data 12</td>
-                <td>Data 13</td>
-              </tr>{" "}
-              <tr className={styles.rowEven}>
-                <td>1</td>
-                <td>Data 1</td>
-                <td>Data 2</td>
-                <td>Data 3</td>
-                <td>Data 4</td>
-                <td>Data 5</td>
-                <td>Data 6</td>
-                <td>Data 7</td>
-              </tr>
-              <tr className={styles.rowOdd}>
-                <td>2</td>
-                <td>Data 7</td>
-                <td>Data 8</td>
-                <td>Data 9</td>
-                <td>Data 10</td>
-                <td>Data 11</td>
-                <td>Data 12</td>
-                <td>Data 13</td>
-              </tr>
+              {!searchTerm && orders.length > 0 ? (
+                orders.map((item, index) => {
+                  return (
+                    <tr className={styles.rowEven} key={index}>
+                      <td>{item.id}</td>
+                      <td>
+                        <img src={item?.items[0].thumbnailUrl} alt="image" />
+                      </td>
+                      <td>Data 2</td>
+                      <td>{item?.recipient.name}</td>
+                      <td>{formatDate(item.created)}</td>
+                      <td>{item.items[0]?.copies}</td>
+                      <td>$ {item.charges[0]?.totalCost.amount}</td>
+                      <td
+                        style={{
+                          color:
+                            item.shipments.length &&
+                            item.shipments[0]?.status === "Shipped"
+                              ? "green"
+                              : "orange",
+                        }}
+                      >
+                        {item.shipments[0]?.status || "In Production"}
+                      </td>
+                    </tr>
+                  );
+                })
+              ) : searchTerm && filteredOrders.length > 0 ? (
+                filteredOrders.map((item, index) => {
+                  return (
+                    <tr className={styles.rowEven} key={index}>
+                      <td>{item.id}</td>
+                      <td>
+                        <img src={item?.items[0].thumbnailUrl} alt="" />
+                      </td>
+                      <td>Data 2</td>
+                      <td>{item?.recipient.name}</td>
+                      <td>{item.created}</td>
+                      <td>{item.items[0]?.copies}</td>
+                      <td>$ {item.charges[0]?.totalCost.amount}</td>
+                      <td
+                        style={{
+                          color:
+                            item.shipments.length &&
+                            item.shipments[0]?.status === "Shipped"
+                              ? "green"
+                              : "orange",
+                        }}
+                      >
+                        {item.shipments[0]?.status || "In Production"}
+                      </td>
+                    </tr>
+                  );
+                })
+              ) : (
+                <tr style={{ textAlign: "center" }}>
+                  <td
+                    colSpan={8}
+                    style={{ width: "100%", textAlign: "center" }}
+                  >
+                    No Orders Found
+                  </td>
+                </tr>
+              )}
             </tbody>
           </table>
+          <div className={styles.pagination}>
+            {orders.length > itemsPerPage && (
+              <ul>
+                {Array.from({
+                  length: Math.ceil(orders.length / itemsPerPage),
+                }).map((_, index) => (
+                  <li
+                    key={index + 1}
+                    className={currentPage === index + 1 ? "active" : ""}
+                    onClick={() => paginate(index + 1)}
+                  >
+                    {index + 1}
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
         </div>
       )}
     </div>

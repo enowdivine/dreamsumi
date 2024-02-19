@@ -14,6 +14,7 @@ import Checkout from './pages/checkout/Checkout';
 import OrderComplete from './pages/orderComplete/OrderComplete';
 import Profile from './pages/profile/Profile';
 import Orders from "./pages/orders/Orders"
+import OrderDetails from './pages/orders/OrderDetails';
 import PageError from './pages/pageError/PageError';
 
 function App() {
@@ -35,6 +36,7 @@ function App() {
           <Route path="/order-complete" element={<OrderComplete />} />
           <Route path="/profile" element={<Profile />} />
           <Route path="/orders" element={<Orders />} />
+          <Route path="/order/:id" element={<OrderDetails />} />
 
           {/* 404 ROUTE */}
           <Route path="*" element={<PageError />} />

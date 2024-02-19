@@ -1,13 +1,11 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import styles from "./PrintOption.module.css";
 import { desktopStyles, tabletStyles, mobileStyles } from "./styles";
 import Navbar from "../../components/Navbar/Navbar";
-// import { UserContext } from "../../context/UserContext";
 import { Link } from "react-router-dom";
 import skus from "../../data/shipping/sku.json";
 
 const PrintOption = () => {
-  // const { selectedImage } = useContext(UserContext);
   const [screenSize, setScreenSize] = useState("");
   const [image, setImage] = useState("");
   const [aspectRatio, setAspectRatio] = useState("Square");

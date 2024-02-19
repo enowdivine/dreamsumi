@@ -62,7 +62,7 @@ const Checkout = () => {
   }, []);
 
   useEffect(() => {
-    if (shippingMethod && copies && countryCode.length == 2) {
+    if (shippingMethod && copies && countryCode.length === 2) {
       setQuoteLoading(true);
       dispatch(
         getQuote({

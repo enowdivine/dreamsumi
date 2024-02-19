@@ -9,7 +9,7 @@
 
 .galleryRight {
     display: flex;
-    animation: slideRight 30s linear infinite;
+    animation: slideRight 100s linear infinite;
 }
 
 @keyframes slideRight {
@@ -26,7 +26,7 @@
 
 .galleryLeft {
     display: flex;
-    animation: slideLeft 30s linear infinite;
+    animation: slideLeft 100s linear infinite;
 }
 
 @keyframes slideLeft {

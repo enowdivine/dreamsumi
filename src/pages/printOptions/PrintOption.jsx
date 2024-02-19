@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect } from "react";
 import styles from "./PrintOption.module.css";
 import { desktopStyles, tabletStyles, mobileStyles } from "./styles";
 import Navbar from "../../components/Navbar/Navbar";
-import { UserContext } from "../../context/UserContext";
+// import { UserContext } from "../../context/UserContext";
 import { Link } from "react-router-dom";
 import skus from "../../data/shipping/sku.json";
 
@@ -24,7 +24,8 @@ const PrintOption = () => {
 
   useEffect(() => {
     let _data = window.localStorage.getItem("selectedImage");
-    setImage(_data.split("?")[0]);
+    // setImage(_data.split("?")[0]);
+    setImage(_data);
     let ratio = window.localStorage.getItem("AspectRatio");
     setAspectRatio(ratio);
   }, []);

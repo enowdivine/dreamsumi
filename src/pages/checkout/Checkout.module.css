@@ -80,7 +80,8 @@
     width: 35%;
     display: flex;
     justify-content: center;
-    margin-left: 10px;
+    margin-left: 20px;
+    margin-top: 8px;
 }
 
 .striptContent {

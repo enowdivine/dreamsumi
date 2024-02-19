@@ -20,7 +20,7 @@ const Howitworks = () => {
           <h3>Get started and create your own art to frame</h3>
           <div className={styles.sectionDiv}>
             <div className={styles.imageDiv}>
-              <img src="/assets/howItworks/two.png" />
+              <img src="/assets/howItworks/Dreamsumi1.png" />
             </div>
             <div className={styles.contentLeft}>
               <h3>Step 1</h3>
@@ -39,12 +39,12 @@ const Howitworks = () => {
               </p>
             </div>
             <div className={styles.imageDiv}>
-              <img src="/assets/howItworks/one.png" />
+              <img src="/assets/howItworks/Dreamsumi2.png" />
             </div>
           </div>
           <div className={styles.sectionDiv}>
             <div className={styles.imageDiv}>
-              <img src="/assets/howItworks/three.png" />
+              <img src="/assets/howItworks/Dreamsumi3.png" />
             </div>
             <div className={styles.contentLeft}>
               <h3>Step 2</h3>

@@ -16,6 +16,7 @@ import Profile from './pages/profile/Profile';
 import Orders from "./pages/orders/Orders"
 import OrderDetails from './pages/orders/OrderDetails';
 import PageError from './pages/pageError/PageError';
+import ProtectedRoutes from './components/protected/ProtectedRoutes';
 
 function App() {
   return (
@@ -28,15 +29,44 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/how-it-works" element={<Howitworks />} />
-          <Route path="/prompts" element={<Prompts />} />
-          <Route path="/refine-image" element={<RefineImage />} />
-          <Route path="/selected-image" element={<SelectedImage />} />
-          <Route path="/print-options" element={<PrintOption />} />
-          <Route path="/checkout" element={<Checkout />} />
-          <Route path="/order-complete" element={<OrderComplete />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/orders" element={<Orders />} />
-          <Route path="/order/:id" element={<OrderDetails />} />
+          <Route path="/prompts" element={
+            <ProtectedRoutes>
+              <Prompts />
+            </ProtectedRoutes>} />
+          <Route path="/refine-image" element={
+            <ProtectedRoutes>
+              <RefineImage />
+            </ProtectedRoutes>} />
+          <Route path="/selected-image" element={
+            <ProtectedRoutes>
+              <SelectedImage />
+            </ProtectedRoutes>} />
+          <Route path="/print-options" element={
+            <ProtectedRoutes>
+              <PrintOption />
+            </ProtectedRoutes>} />
+          <Route path="/checkout" element={
+            <ProtectedRoutes>
+              <Checkout />
+            </ProtectedRoutes>} />
+          <Route path="/order-complete" element={
+            <ProtectedRoutes>
+              <OrderComplete />
+            </ProtectedRoutes>} />
+          <Route path="/profile" element={
+            <ProtectedRoutes>
+              <Profile />
+            </ProtectedRoutes>} />
+          <Route path="/orders" element={
+            <ProtectedRoutes>
+              <Orders />
+            </ProtectedRoutes>
+          } />
+          <Route path="/order/:id" element={
+            <ProtectedRoutes>
+              <OrderDetails />
+            </ProtectedRoutes>
+          } />
 
           {/* 404 ROUTE */}
           <Route path="*" element={<PageError />} />

@@ -7,5 +7,99 @@
 
 .content {
     width: 90%;
-    padding-top: 90px;
+    padding-top: 70px;
+    text-align: left;
+}
+
+/* ORDER DETAILS STYLING */
+
+.details {
+    width: 100%;
+    display: flex;
+}
+
+.leftDetails {
+    border: 1px solid #ccc;
+    width: 80%;
+    min-height: 300px;
+    margin-right: 10px;
+}
+
+.shippingHeader {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #555;
+    color: white;
+}
+
+.shippingHeader a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shippingDetails {
+    text-align: left;
+}
+
+.shippingDetails div {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0 10px;
+}
+
+.shippingDetails div p {
+    margin: 0;
+    padding: 0;
+}
+
+.imageSection {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 20px;
+    border-top: 1px solid #fff;
+}
+
+.imageSection table {
+    border: 1px solid white;
+}
+
+.imageSection table th,
+.imageSection table td {
+    padding: 8px 15px;
+    text-align: left;
+    color: #fff;
+    cursor: pointer;
+    border: 1px solid white;
+
+}
+
+.imageSection table tr {
+    width: 100% !important;
+    padding: 10px !important;
+
+}
+
+.summary {
+    border-top: 1px solid #fff;
+    padding: 20px;
+}
+
+.rightDetails {
+    margin-left: 10px;
+    border: 1px solid #ccc;
+    width: 20%;
+    min-height: 300px;
+    padding: 20px;
+}
+
+.otherHeaders {
+    font-weight: bold;
+    font-size: 20px;
 }

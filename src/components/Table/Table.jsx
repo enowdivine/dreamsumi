@@ -4,8 +4,10 @@ import { useDispatch } from "react-redux";
 import { getOrders } from "../../store/reducers/prodigi";
 import { ThreeCircles } from "react-loader-spinner";
 import { formatDate } from "../../helpers/formatDate";
+import { useNavigate } from "react-router-dom";
 
 function TableComponent() {
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(false);
   const [orders, setOrders] = useState([]);
@@ -79,7 +81,7 @@ function TableComponent() {
           <table className={styles.table}>
             <thead>
               <tr>
-                <th>No</th>
+                {/* <th>No</th> */}
                 <th>Image</th>
                 <th>Order</th>
                 <th>Customer</th>
@@ -93,12 +95,16 @@ function TableComponent() {
               {!searchTerm && orders.length > 0 ? (
                 orders.map((item, index) => {
                   return (
-                    <tr className={styles.rowEven} key={index}>
-                      <td>{item.id}</td>
+                    <tr
+                      className={styles.rowEven}
+                      key={index}
+                      onClick={() => navigate(`/order/${item.id}`)}
+                    >
+                      {/* <td>{item.id}</td> */}
                       <td>
                         <img src={item?.items[0].thumbnailUrl} alt="image" />
                       </td>
-                      <td>Data 2</td>
+                      <td>{item.id}</td>
                       <td>{item?.recipient.name}</td>
                       <td>{formatDate(item.created)}</td>
                       <td>{item.items[0]?.copies}</td>
@@ -120,12 +126,16 @@ function TableComponent() {
               ) : searchTerm && filteredOrders.length > 0 ? (
                 filteredOrders.map((item, index) => {
                   return (
-                    <tr className={styles.rowEven} key={index}>
-                      <td>{item.id}</td>
+                    <tr
+                      className={styles.rowEven}
+                      key={index}
+                      onClick={() => navigate(`/order/${item.id}`)}
+                    >
+                      {/* <td>{item.id}</td> */}
                       <td>
                         <img src={item?.items[0].thumbnailUrl} alt="" />
                       </td>
-                      <td>Data 2</td>
+                      <td>{item.id}</td>
                       <td>{item?.recipient.name}</td>
                       <td>{item.created}</td>
                       <td>{item.items[0]?.copies}</td>

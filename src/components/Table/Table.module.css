@@ -37,7 +37,6 @@
 
 .table tr {
     padding: 100px;
-
 }
 
 .table th {
@@ -46,6 +45,7 @@
 
 .table tbody tr:hover {
     background-color: #666;
+    cursor: pointer;
 }
 
 .pagination {

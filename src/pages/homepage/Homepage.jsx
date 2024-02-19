@@ -8,7 +8,7 @@ import { UserContext } from "../../context/UserContext";
 const Homepage = () => {
   const { dream, setDream } = useContext(UserContext);
   return (
-    <div>
+    <div className={styles.homewrapper}>
       <Navbar />
       <div className={styles.contentWrapper}>
         <div className={styles.content}>

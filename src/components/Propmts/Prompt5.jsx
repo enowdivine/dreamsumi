@@ -16,7 +16,10 @@ const Prompt1 = () => {
             background: aspectRatio === "Portrait" ? "#aaa" : "#fff",
           }}
           className={styles.portrait}
-          onClick={() => setAspectRatio("Portrait")}
+          onClick={() => {
+            setAspectRatio("Portrait");
+            localStorage.setItem("AspectRatio", "Portrait");
+          }}
         >
           Potrait
         </div>
@@ -25,7 +28,10 @@ const Prompt1 = () => {
             background: aspectRatio === "Landscape" ? "#aaa" : "#fff",
           }}
           className={styles.landscape}
-          onClick={() => setAspectRatio("Landscape")}
+          onClick={() => {
+            setAspectRatio("Landscape");
+            localStorage.setItem("AspectRatio", "Landscape");
+          }}
         >
           Landscape
         </div>
@@ -34,7 +40,10 @@ const Prompt1 = () => {
             background: aspectRatio === "Square" ? "#aaa" : "#fff",
           }}
           className={styles.square}
-          onClick={() => setAspectRatio("Square")}
+          onClick={() => {
+            setAspectRatio("Square");
+            localStorage.setItem("AspectRatio", "Square");
+          }}
         >
           Square
         </div>

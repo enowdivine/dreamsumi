@@ -1,0 +1,506 @@
+[
+     {
+      "SKU": "GLOBAL-FAP-A4",
+      "Description": "EMA, Enhanced Matte Art Paper, 200gsm, 21x29.7cm / 8.3x11.7\" A4",
+      "Colour": "Unframed",
+      "Mat": "No-Mount",
+      "Notes": "Portrait/Landscape",
+      "Product": "EMA, Enhanced Matte Art Paper",
+      "Size": "21x29.7cm / 8.3x11.7 A4"
+     },
+     {
+      "SKU": "GLOBAL-CFP-A4",
+      "Description": "Classic Frame, EMA 200gsm Fine Art Print, No Mount / No Mat, Perspex Glaze, 21x29.7cm / 8.3x11.7\" A4",
+      "Colour": "white",
+      "Mat": "No-Mount",
+      "Notes": "Portrait/Landscape",
+      "Product": "Classic Frame, EMA 200gsm Fine Art Print",
+      "Size": "21x29.7cm / 8.3x11.7 A4"
+     },
+     {
+      "SKU": "GLOBAL-CFP-A4",
+      "Description": "Classic Frame, EMA 200gsm Fine Art Print, No Mount / No Mat, Perspex Glaze, 21x29.7cm / 8.3x11.7\" A4",
+      "Colour": "natural",
+      "Mat": "No-Mount",
+      "Notes": "Portrait/Landscape",
+      "Product": "Classic Frame, EMA 200gsm Fine Art Print",
+      "Size": "21x29.7cm / 8.3x11.7 A4"
+     },
+     {
+      "SKU": "GLOBAL-CFP-A4",
+      "Description": "Classic Frame, EMA 200gsm Fine Art Print, No Mount / No Mat, Perspex Glaze, 21x29.7cm / 8.3x11.7\" A4",
+      "Colour": "black",
+      "Mat": "No-Mount",
+      "Notes": "Portrait/Landscape",
+      "Product": "Classic Frame, EMA 200gsm Fine Art Print",
+      "Size": "21x29.7cm / 8.3x11.7 A4"
+     },
+     {
+      "SKU": "GLOBAL-FAP-A3",
+      "Description": "EMA, Enhanced Matte Art Paper, 200gsm, 29.7x42cm / 11.7x16.5\" A3",
+      "Colour": "Unframed",
+      "Mat": "No-Mount",
+      "Notes": "Portrait/Landscape",
+      "Product": "EMA, Enhanced Matte Art Paper",
+      "Size": "29.7x42cm / 11.7x16.5 A3"
+     },
+     {
+      "SKU": "GLOBAL-CFP-A3",
+      "Description": "Classic Frame, EMA 200gsm Fine Art Print, No Mount / No Mat, Perspex Glaze, 29.7x42cm / 11.7x16.5\" A3",
+      "Colour": "black",
+      "Mat": "No-Mount",
+      "Notes": "Portrait/Landscape",
+      "Product": "Classic Frame, EMA 200gsm Fine Art Print",
+      "Size": "29.7x42cm / 11.7x16.5 A3"
+     },
+     {
+      "SKU": "GLOBAL-CFP-A3",
+      "Description": "Classic Frame, EMA 200gsm Fine Art Print, No Mount / No Mat, Perspex Glaze, 29.7x42cm / 11.7x16.5\" A3",
+      "Colour": "natural",
+      "Mat": "No-Mount",
+      "Notes": "Portrait/Landscape",
+      "Product": "Classic Frame, EMA 200gsm Fine Art Print",
+      "Size": "29.7x42cm / 11.7x16.5 A3"
+     },
+     {
+      "SKU": "GLOBAL-CFP-A3",
+      "Description": "Classic Frame, EMA 200gsm Fine Art Print, No Mount / No Mat, Perspex Glaze, 29.7x42cm / 11.7x16.5\" A3",
+      "Colour": "white",
+      "Mat": "No-Mount",
+      "Notes": "Portrait/Landscape",
+      "Product": "Classic Frame, EMA 200gsm Fine Art Print",
+      "Size": "29.7x42cm / 11.7x16.5 A3"
+     },
+     {
+      "SKU": "GLOBAL-FAP-A2",
+      "Description": "EMA, Enhanced Matte Art Paper, 200gsm, 42x59.4cm / 16.5x23.4\" A2",
+      "Colour": "Unframed",
+      "Mat": "No-Mount",
+      "Notes": "Portrait/Landscape",
+      "Product": "EMA, Enhanced Matte Art Paper",
+      "Size": "42x59.4cm / 16.5x23.4 A2"
+     },
+     {
+      "SKU": "GLOBAL-CFP-A2",
+      "Description": "Classic Frame, EMA 200gsm Fine Art Print, No Mount / No Mat, Perspex Glaze, 42x59.4cm / 16.5x23.4\" A2",
+      "Colour": "black",
+      "Mat": "No-Mount",
+      "Notes": "Portrait/Landscape",
+      "Product": "Classic Frame, EMA 200gsm Fine Art Print",
+      "Size": "42x59.4cm / 16.5x23.4 A2"
+     },
+     {
+      "SKU": "GLOBAL-CFP-A2",
+      "Description": "Classic Frame, EMA 200gsm Fine Art Print, No Mount / No Mat, Perspex Glaze, 42x59.4cm / 16.5x23.4\" A2",
+      "Colour": "natural",
+      "Mat": "No-Mount",
+      "Notes": "Portrait/Landscape",
+      "Product": "Classic Frame, EMA 200gsm Fine Art Print",
+      "Size": "42x59.4cm / 16.5x23.4 A2"
+     },
+     {
+      "SKU": "GLOBAL-CFP-A2",
+      "Description": "Classic Frame, EMA 200gsm Fine Art Print, No Mount / No Mat, Perspex Glaze, 42x59.4cm / 16.5x23.4\" A2",
+      "Colour": "white",
+      "Mat": "No-Mount",
+      "Notes": "Portrait/Landscape",
+      "Product": "Classic Frame, EMA 200gsm Fine Art Print",
+      "Size": "42x59.4cm / 16.5x23.4 A2"
+     },
+     {
+      "SKU": "GLOBAL-FAP-A1",
+      "Description": "EMA, Enhanced Matte Art Paper, 200gsm, 59.4x84.1cm / 23.4x33.1\" A1",
+      "Colour": "Unframed",
+      "Mat": "No-Mount",
+      "Notes": "Portrait/Landscape",
+      "Product": "EMA, Enhanced Matte Art Paper",
+      "Size": "59.4x84.1cm / 23.4x33.1 A1"
+     },
+     {
+      "SKU": "GLOBAL-CFP-A1",
+      "Description": "Classic Frame, EMA 200gsm Fine Art Print, No Mount / No Mat, Perspex Glaze, 59.4x84.1cm / 23.4x33.1\" A1",
+      "Colour": "white",
+      "Mat": "No-Mount",
+      "Notes": "Portrait/Landscape",
+      "Product": "Classic Frame, EMA 200gsm Fine Art Print",
+      "Size": "59.4x84.1cm / 23.4x33.1 A1"
+     },
+     {
+      "SKU": "GLOBAL-CFP-A1",
+      "Description": "Classic Frame, EMA 200gsm Fine Art Print, No Mount / No Mat, Perspex Glaze, 59.4x84.1cm / 23.4x33.1\" A1",
+      "Colour": "natural",
+      "Mat": "No-Mount",
+      "Notes": "Portrait/Landscape",
+      "Product": "Classic Frame, EMA 200gsm Fine Art Print",
+      "Size": "59.4x84.1cm / 23.4x33.1 A1"
+     },
+     {
+      "SKU": "GLOBAL-CFP-A1",
+      "Description": "Classic Frame, EMA 200gsm Fine Art Print, No Mount / No Mat, Perspex Glaze, 59.4x84.1cm / 23.4x33.1\" A1",
+      "Colour": "black",
+      "Mat": "No-Mount",
+      "Notes": "Portrait/Landscape",
+      "Product": "Classic Frame, EMA 200gsm Fine Art Print",
+      "Size": "59.4x84.1cm / 23.4x33.1 A1"
+     },
+     {
+      "SKU": "GLOBAL-FAP-12X12",
+      "Description": "EMA, Enhanced Matte Art Paper, 200gsm, 30x30cm / 12x12\"",
+      "Colour": "Unframed",
+      "Mat": "No-Mount",
+      "Notes": "Square",
+      "Product": "EMA, Enhanced Matte Art Paper",
+      "Size": " 12x12 / 30x30cm"
+     },
+     {
+      "SKU": "GLOBAL-CFP-12X12",
+      "Description": "Classic Frame, EMA 200gsm Fine Art Print, No Mount / No Mat, Perspex Glaze, 12x12\" / 30x30cm",
+      "Colour": "black",
+      "Mat": "No-Mount",
+      "Notes": "Square",
+      "Product": "Classic Frame, EMA 200gsm Fine Art Print",
+      "Size": " 12x12 / 30x30cm"
+     },
+     {
+      "SKU": "GLOBAL-CFP-12X12",
+      "Description": "Classic Frame, EMA 200gsm Fine Art Print, No Mount / No Mat, Perspex Glaze, 12x12\" / 30x30cm",
+      "Colour": "white",
+      "Mat": "No-Mount",
+      "Notes": "Square",
+      "Product": "Classic Frame, EMA 200gsm Fine Art Print",
+      "Size": " 12x12 / 30x30cm"
+     },
+     {
+      "SKU": "GLOBAL-CFP-12X12",
+      "Description": "Classic Frame, EMA 200gsm Fine Art Print, No Mount / No Mat, Perspex Glaze, 12x12\" / 30x30cm",
+      "Colour": "natural",
+      "Mat": "No-Mount",
+      "Notes": "Square",
+      "Product": "Classic Frame, EMA 200gsm Fine Art Print",
+      "Size": " 12x12 / 30x30cm"
+     },
+     {
+      "SKU": "GLOBAL-FAP-16X16",
+      "Description": "EMA, Enhanced Matte Art Paper, 200gsm, 40x40cm / 16x16\"",
+      "Colour": "Unframed",
+      "Mat": "No-Mount",
+      "Notes": "Square",
+      "Product": "EMA, Enhanced Matte Art Paper",
+      "Size": "16x16 / 40x40cm "
+     },
+     {
+      "SKU": "GLOBAL-CFP-16X16",
+      "Description": "Classic Frame, EMA 200gsm Fine Art Print, No Mount / No Mat, Perspex Glaze, 16x16\" / 40x40cm",
+      "Colour": "black",
+      "Mat": "No-Mount",
+      "Notes": "Square",
+      "Product": "Classic Frame, EMA 200gsm Fine Art Print",
+      "Size": "16x16 / 40x40cm "
+     },
+     {
+      "SKU": "GLOBAL-CFP-16X16",
+      "Description": "Classic Frame, EMA 200gsm Fine Art Print, No Mount / No Mat, Perspex Glaze, 16x16\" / 40x40cm",
+      "Colour": "natural",
+      "Mat": "No-Mount",
+      "Notes": "Square",
+      "Product": "Classic Frame, EMA 200gsm Fine Art Print",
+      "Size": "16x16 / 40x40cm "
+     },
+     {
+      "SKU": "GLOBAL-CFP-16X16",
+      "Description": "Classic Frame, EMA 200gsm Fine Art Print, No Mount / No Mat, Perspex Glaze, 16x16\" / 40x40cm",
+      "Colour": "white",
+      "Mat": "No-Mount",
+      "Notes": "Square",
+      "Product": "Classic Frame, EMA 200gsm Fine Art Print",
+      "Size": "16x16 / 40x40cm "
+     },
+     {
+      "SKU": "GLOBAL-FAP-20X20",
+      "Description": "EMA, Enhanced Matte Art Paper, 200gsm, 50x50cm / 20x20\"",
+      "Colour": "Unframed",
+      "Mat": "No-Mount",
+      "Notes": "Square",
+      "Product": "EMA, Enhanced Matte Art Paper",
+      "Size": " 20x20 / 50x50cm"
+     },
+     {
+      "SKU": "GLOBAL-CFP-20X20",
+      "Description": "Classic Frame, EMA 200gsm Fine Art Print, No Mount / No Mat, Perspex Glaze, 20x20\" / 50x50cm",
+      "Colour": "natural",
+      "Mat": "No-Mount",
+      "Notes": "Square",
+      "Product": "Classic Frame, EMA 200gsm Fine Art Print",
+      "Size": " 20x20 / 50x50cm"
+     },
+     {
+      "SKU": "GLOBAL-CFP-20X20",
+      "Description": "Classic Frame, EMA 200gsm Fine Art Print, No Mount / No Mat, Perspex Glaze, 20x20\" / 50x50cm",
+      "Colour": "white",
+      "Mat": "No-Mount",
+      "Notes": "Square",
+      "Product": "Classic Frame, EMA 200gsm Fine Art Print",
+      "Size": " 20x20 / 50x50cm"
+     },
+     {
+      "SKU": "GLOBAL-CFP-20X20",
+      "Description": "Classic Frame, EMA 200gsm Fine Art Print, No Mount / No Mat, Perspex Glaze, 20x20\" / 50x50cm",
+      "Colour": "black",
+      "Mat": "No-Mount",
+      "Notes": "Square",
+      "Product": "Classic Frame, EMA 200gsm Fine Art Print",
+      "Size": " 20x20 / 50x50cm"
+     },
+     {
+      "SKU": "GLOBAL-FAP-24X24",
+      "Description": "EMA, Enhanced Matte Art Paper, 200gsm, 60x60cm / 24x24\"",
+      "Colour": "Unframed",
+      "Mat": "No-Mount",
+      "Notes": "Square",
+      "Product": "EMA, Enhanced Matte Art Paper",
+      "Size": " 24x24 / 60x60cm"
+     },
+     {
+      "SKU": "GLOBAL-CFP-24X24",
+      "Description": "Classic Frame, EMA 200gsm Fine Art Print, No Mount / No Mat, Perspex Glaze, 24x24\" / 60x60cm",
+      "Colour": "natural",
+      "Mat": "No-Mount",
+      "Notes": "Square",
+      "Product": "Classic Frame, EMA 200gsm Fine Art Print",
+      "Size": " 24x24 / 60x60cm"
+     },
+     {
+      "SKU": "GLOBAL-CFP-24X24",
+      "Description": "Classic Frame, EMA 200gsm Fine Art Print, No Mount / No Mat, Perspex Glaze, 24x24\" / 60x60cm",
+      "Colour": "white",
+      "Mat": "No-Mount",
+      "Notes": "Square",
+      "Product": "Classic Frame, EMA 200gsm Fine Art Print",
+      "Size": " 24x24 / 60x60cm"
+     },
+     {
+      "SKU": "GLOBAL-CFP-24X24",
+      "Description": "Classic Frame, EMA 200gsm Fine Art Print, No Mount / No Mat, Perspex Glaze, 24x24\" / 60x60cm",
+      "Colour": "black",
+      "Mat": "No-Mount",
+      "Notes": "Square",
+      "Product": "Classic Frame, EMA 200gsm Fine Art Print",
+      "Size": " 24x24 / 60x60cm"
+     },
+     {
+      "SKU": "GLOBAL-CFPM-A1",
+      "Description": "Classic Frame, EMA 200gsm Fine Art Print, Mounted / Matted, Perspex Glaze, 59.4x84.1cm/23.4x33.1\" A1",
+      "Colour": "natural",
+      "Mat": "2.4mm",
+      "Notes": "Portrait/Landscape",
+      "Product": "Classic Frame, EMA 200gsm Fine Art Print",
+      "Size": "59.4x84.1cm / 23.4x33.1 A1"
+     },
+     {
+      "SKU": "GLOBAL-CFPM-A1",
+      "Description": "Classic Frame, EMA 200gsm Fine Art Print, Mounted / Matted, Perspex Glaze, 59.4x84.1cm/23.4x33.1\" A1",
+      "Colour": "black",
+      "Mat": "2.4mm",
+      "Notes": "Portrait/Landscape",
+      "Product": "Classic Frame, EMA 200gsm Fine Art Print",
+      "Size": "59.4x84.1cm / 23.4x33.1 A1"
+     },
+     {
+      "SKU": "GLOBAL-CFPM-A1",
+      "Description": "Classic Frame, EMA 200gsm Fine Art Print, Mounted / Matted, Perspex Glaze, 59.4x84.1cm/23.4x33.1\" A1",
+      "Colour": "white",
+      "Mat": "2.4mm",
+      "Notes": "Portrait/Landscape",
+      "Product": "Classic Frame, EMA 200gsm Fine Art Print",
+      "Size": "59.4x84.1cm / 23.4x33.1 A1"
+     },
+     {
+      "SKU": "GLOBAL-CFPM-A2",
+      "Description": "Classic Frame, EMA 200gsm Fine Art Print, Mounted / Matted, Perspex Glaze, 42x59.4cm/16.5x23.4\" A2",
+      "Colour": "natural",
+      "Mat": "2.4mm",
+      "Notes": "Portrait/Landscape",
+      "Product": "Classic Frame, EMA 200gsm Fine Art Print",
+      "Size": "42x59.4cm / 16.5x23.4 A2"
+     },
+     {
+      "SKU": "GLOBAL-CFPM-A2",
+      "Description": "Classic Frame, EMA 200gsm Fine Art Print, Mounted / Matted, Perspex Glaze, 42x59.4cm/16.5x23.4\" A2",
+      "Colour": "white",
+      "Mat": "2.4mm",
+      "Notes": "Portrait/Landscape",
+      "Product": "Classic Frame, EMA 200gsm Fine Art Print",
+      "Size": "42x59.4cm / 16.5x23.4 A2"
+     },
+     {
+      "SKU": "GLOBAL-CFPM-A2",
+      "Description": "Classic Frame, EMA 200gsm Fine Art Print, Mounted / Matted, Perspex Glaze, 42x59.4cm/16.5x23.4\" A2",
+      "Colour": "black",
+      "Mat": "2.4mm",
+      "Notes": "Portrait/Landscape",
+      "Product": "Classic Frame, EMA 200gsm Fine Art Print",
+      "Size": "42x59.4cm / 16.5x23.4 A2"
+     },
+     {
+      "SKU": "GLOBAL-CFPM-A3",
+      "Description": "Classic Frame, EMA 200gsm Fine Art Print, Mounted / Matted, Perspex Glaze, 29.6x42cm/11.7x16.5\" A3",
+      "Colour": "natural",
+      "Mat": "2.4mm",
+      "Notes": "Portrait/Landscape",
+      "Product": "Classic Frame, EMA 200gsm Fine Art Print",
+      "Size": "29.7x42cm / 11.7x16.5 A3"
+     },
+     {
+      "SKU": "GLOBAL-CFPM-A3",
+      "Description": "Classic Frame, EMA 200gsm Fine Art Print, Mounted / Matted, Perspex Glaze, 29.6x42cm/11.7x16.5\" A3",
+      "Colour": "black",
+      "Mat": "2.4mm",
+      "Notes": "Portrait/Landscape",
+      "Product": "Classic Frame, EMA 200gsm Fine Art Print",
+      "Size": "29.7x42cm / 11.7x16.5 A3"
+     },
+     {
+      "SKU": "GLOBAL-CFPM-A3",
+      "Description": "Classic Frame, EMA 200gsm Fine Art Print, Mounted / Matted, Perspex Glaze, 29.6x42cm/11.7x16.5\" A3",
+      "Colour": "white",
+      "Mat": "2.4mm",
+      "Notes": "Portrait/Landscape",
+      "Product": "Classic Frame, EMA 200gsm Fine Art Print",
+      "Size": "29.7x42cm / 11.7x16.5 A3"
+     },
+     {
+      "SKU": "GLOBAL-CFPM-A4",
+      "Description": "Classic Frame, EMA 200gsm Fine Art Print, Mounted / Matted, Perspex Glaze, 21x29.7cm/8.3x11.7\" A4",
+      "Colour": "white",
+      "Mat": "2.4mm",
+      "Notes": "Portrait/Landscape",
+      "Product": "Classic Frame, EMA 200gsm Fine Art Print",
+      "Size": "21x29.7cm / 8.3x11.7 A4"
+     },
+     {
+      "SKU": "GLOBAL-CFPM-A4",
+      "Description": "Classic Frame, EMA 200gsm Fine Art Print, Mounted / Matted, Perspex Glaze, 21x29.7cm/8.3x11.7\" A4",
+      "Colour": "black",
+      "Mat": "2.4mm",
+      "Notes": "Portrait/Landscape",
+      "Product": "Classic Frame, EMA 200gsm Fine Art Print",
+      "Size": "21x29.7cm / 8.3x11.7 A4"
+     },
+     {
+      "SKU": "GLOBAL-CFPM-A4",
+      "Description": "Classic Frame, EMA 200gsm Fine Art Print, Mounted / Matted, Perspex Glaze, 21x29.7cm/8.3x11.7\" A4",
+      "Colour": "natural",
+      "Mat": "2.4mm",
+      "Notes": "Portrait/Landscape",
+      "Product": "Classic Frame, EMA 200gsm Fine Art Print",
+      "Size": "21x29.7cm / 8.3x11.7 A4"
+     },
+     {
+      "SKU": "GLOBAL-CFPM-12X12",
+      "Description": "Classic Frame, EMA 200gsm Fine Art Print, Mounted / Matted, Perspex Glaze, 12x12\" / 30x30cm",
+      "Colour": "white",
+      "Mat": "2.4mm",
+      "Notes": "Square",
+      "Product": "Classic Frame, EMA 200gsm Fine Art Print",
+      "Size": "12x12 / 30x30cm"
+     },
+     {
+      "SKU": "GLOBAL-CFPM-12X12",
+      "Description": "Classic Frame, EMA 200gsm Fine Art Print, Mounted / Matted, Perspex Glaze, 12x12\" / 30x30cm",
+      "Colour": "natural",
+      "Mat": "2.4mm",
+      "Notes": "Square",
+      "Product": "Classic Frame, EMA 200gsm Fine Art Print",
+      "Size": "12x12 / 30x30cm"
+     },
+     {
+      "SKU": "GLOBAL-CFPM-12X12",
+      "Description": "Classic Frame, EMA 200gsm Fine Art Print, Mounted / Matted, Perspex Glaze, 12x12\" / 30x30cm",
+      "Colour": "black",
+      "Mat": "2.4mm",
+      "Notes": "Square",
+      "Product": "Classic Frame, EMA 200gsm Fine Art Print",
+      "Size": "12x12 / 30x30cm"
+     },
+     {
+      "SKU": "GLOBAL-CFPM-16X16",
+      "Description": "Classic Frame, EMA 200gsm Fine Art Print, Mounted / Matted, Perspex Glaze, 16x16\" / 40x40cm",
+      "Colour": "natural",
+      "Mat": "2.4mm",
+      "Notes": "Square",
+      "Product": "Classic Frame, EMA 200gsm Fine Art Print",
+      "Size": "16x16 / 40x40cm"
+     },
+     {
+      "SKU": "GLOBAL-CFPM-16X16",
+      "Description": "Classic Frame, EMA 200gsm Fine Art Print, Mounted / Matted, Perspex Glaze, 16x16\" / 40x40cm",
+      "Colour": "white",
+      "Mat": "2.4mm",
+      "Notes": "Square",
+      "Product": "Classic Frame, EMA 200gsm Fine Art Print",
+      "Size": "16x16 / 40x40cm"
+     },
+     {
+      "SKU": "GLOBAL-CFPM-16X16",
+      "Description": "Classic Frame, EMA 200gsm Fine Art Print, Mounted / Matted, Perspex Glaze, 16x16\" / 40x40cm",
+      "Colour": "black",
+      "Mat": "2.4mm",
+      "Notes": "Square",
+      "Product": "Classic Frame, EMA 200gsm Fine Art Print",
+      "Size": "16x16 / 40x40cm"
+     },
+     {
+      "SKU": "GLOBAL-CFPM-20X20",
+      "Description": "Classic Frame, EMA 200gsm Fine Art Print, Mounted / Matted, Perspex Glaze, 20x20\" / 50x50cm",
+      "Colour": "natural",
+      "Mat": "2.4mm",
+      "Notes": "Square",
+      "Product": "Classic Frame, EMA 200gsm Fine Art Print",
+      "Size": " 20x20 / 50x50cm"
+     },
+     {
+      "SKU": "GLOBAL-CFPM-20X20",
+      "Description": "Classic Frame, EMA 200gsm Fine Art Print, Mounted / Matted, Perspex Glaze, 20x20\" / 50x50cm",
+      "Colour": "black",
+      "Mat": "2.4mm",
+      "Notes": "Square",
+      "Product": "Classic Frame, EMA 200gsm Fine Art Print",
+      "Size": " 20x20 / 50x50cm"
+     },
+     {
+      "SKU": "GLOBAL-CFPM-20X20",
+      "Description": "Classic Frame, EMA 200gsm Fine Art Print, Mounted / Matted, Perspex Glaze, 20x20\" / 50x50cm",
+      "Colour": "white",
+      "Mat": "2.4mm",
+      "Notes": "Square",
+      "Product": "Classic Frame, EMA 200gsm Fine Art Print",
+      "Size": " 20x20 / 50x50cm"
+     },
+     {
+      "SKU": "GLOBAL-CFPM-24X24",
+      "Description": "Classic Frame, EMA 200gsm Fine Art Print, Mounted / Matted, Perspex Glaze, 24x24\" / 60x60cm",
+      "Colour": "natural",
+      "Mat": "2.4mm",
+      "Notes": "Square",
+      "Product": "Classic Frame, EMA 200gsm Fine Art Print",
+      "Size": "24x24 / 60x60cm"
+     },
+     {
+      "SKU": "GLOBAL-CFPM-24X24",
+      "Description": "Classic Frame, EMA 200gsm Fine Art Print, Mounted / Matted, Perspex Glaze, 24x24\" / 60x60cm",
+      "Colour": "black",
+      "Mat": "2.4mm",
+      "Notes": "Square",
+      "Product": "Classic Frame, EMA 200gsm Fine Art Print",
+      "Size": "24x24 / 60x60cm"
+     },
+     {
+      "SKU": "GLOBAL-CFPM-24X24",
+      "Description": "Classic Frame, EMA 200gsm Fine Art Print, Mounted / Matted, Perspex Glaze, 24x24\" / 60x60cm",
+      "Colour": "white",
+      "Mat": "2.4mm",
+      "Notes": "Square",
+      "Product": "Classic Frame, EMA 200gsm Fine Art Print",
+      "Size": "24x24 / 60x60cm"
+     }
+    ]

@@ -71,44 +71,45 @@ const Prompts = () => {
         )
       )
         .then((res) => {
-          console.log(res);
           if (res.meta.requestStatus === "rejected") {
             toast.error("An error occured");
             setLoading(false);
             setGeneratingImage(false);
             return;
           }
-          // setInterval(async () => {
-          //   await dispatch(
-          //     checkProgress({
-          //       jobId: result.jobid,
-          //       userToken,
-          //     })
-          //   ).then((_result) => {
-          //     if (_result.status === "completed") {
-          //       window.localStorage.setItem(
-          //         "dreamsumi",
-          //         JSON.stringify(_result)
-          //       );
-          //       navigate("/refine-image");
-          //     }
-          //     if (
-          //       _result.status === "failed" ||
-          //       _result.status === "cancelled"
-          //     ) {
-          //       toast.error("Something went wrong!!");
-          //       setLoading(false);
-          //     }
-          //   });
-          // }, 2000);
+          setInterval(async () => {
+            await dispatch(checkProgress(res.payload.jobid)).then((_result) => {
+              if (_result.payload.status === "completed") {
+                window.localStorage.setItem(
+                  "dreamsumi",
+                  JSON.stringify(_result.payload)
+                );
+                navigate("/refine-image");
+                return;
+              }
+              if (
+                _result.payload.status === "failed" ||
+                _result.payload.status === "cancelled"
+              ) {
+                toast.error("Something went wrong!!");
+                setLoading(false);
+                setGeneratingImage(false);
+                return;
+              }
+            });
+          }, 2000);
         })
         .catch((err) => {
           toast.error("Something went wrong!!");
           setLoading(false);
+          setGeneratingImage(false);
+          return;
         });
     } catch (error) {
       console.log(error);
       setLoading(false);
+      setGeneratingImage(false);
+      return;
     }
   };
 

@@ -15,7 +15,7 @@ const Prompt1 = ({ edit }) => {
     setGeneratedPrompt,
   } = useContext(UserContext);
 
-  const text = `${dreamObject} ${dream} ${dreamAction} in a ${dreamLocation}  with a ${dreamMode} Colour Scheme  in ${artStyle}  Style with an aspect ratio of ${aspectRatio}`;
+  const text = `${dreamObject} ${dream} ${dreamAction} in a ${dreamLocation} with a ${dreamMode} Colour Scheme in ${artStyle} Style with an aspect ratio of ${aspectRatio}`;
 
   useEffect(() => {
     setGeneratedPrompt(text);

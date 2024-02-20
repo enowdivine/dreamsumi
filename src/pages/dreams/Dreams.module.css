@@ -20,6 +20,19 @@
     align-items: center;
     background-color: #fff;
     border-radius: 10px;
+    padding: 0;
+    border-color: #373196;
+}
+
+.inputDiv div {
+    width: 20% !important;
+    height: 60px !important;
+    color: white;
+    background-color: #373196;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
 }
 
 .inputDiv a {
@@ -27,13 +40,13 @@
     justify-content: center;
     align-items: center;
     width: 50px;
-    height: 70px;
+    height: 60px;
     cursor: pointer;
 }
 
 .contentWrapper input {
     width: 100%;
-    padding: 20px;
+    padding: 15px;
     border-radius: 10px;
     outline: none;
     font-size: 18px;

@@ -22,6 +22,7 @@ const Dreams = () => {
           <GalleryLeft images={row2} />
         </div>
         <div className={styles.inputDiv}>
+          <div>I want to dream of</div>
           <input type="text" placeholder="Write your dream ..." />
           <Link to="/prompts">
             <FaArrowRightLong size={24} color="grey" />

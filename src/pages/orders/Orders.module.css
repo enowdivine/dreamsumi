@@ -2,12 +2,12 @@
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center
+    /* align-items: center */
 }
 
 .content {
     width: 90%;
-    padding-top: 70px;
+    padding-top: 90px;
     text-align: left;
 }
 

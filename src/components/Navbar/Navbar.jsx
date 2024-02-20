@@ -20,7 +20,7 @@ const Navbar = () => {
             <div className={styles.profileImg}>
               <Dropdown />
             </div>
-            <div>
+            <div className={styles.credits}>
               <Link to="#">Credits: {userCredit}</Link>
             </div>
           </>

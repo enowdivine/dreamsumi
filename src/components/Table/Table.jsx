@@ -5,16 +5,20 @@ import { getOrders } from "../../store/reducers/prodigi";
 import { ThreeCircles } from "react-loader-spinner";
 import { formatDate } from "../../helpers/formatDate";
 import { useNavigate } from "react-router-dom";
+import ReactPaginate from "react-paginate";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 function TableComponent() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [loading, setLoading] = useState(false);
   const [orders, setOrders] = useState([]);
+  const [data, setData] = useState([]);
   const [filteredOrders, setFilteredOrders] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
-  const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage] = useState(2);
+  const [currentPage, setCurrentPage] = useState(0);
+  const [totalPages, setTotalPages] = useState(0);
+  const itemsPerPage = 10;
 
   const getOrdersHandler = async () => {
     try {
@@ -29,17 +33,10 @@ function TableComponent() {
       setLoading(false);
     }
   };
+
   useEffect(() => {
     getOrdersHandler();
   }, []);
-
-  const indexOfLastItem = currentPage * itemsPerPage;
-  const indexOfFirstItem = indexOfLastItem - itemsPerPage;
-  const currentItems = orders.slice(indexOfFirstItem, indexOfLastItem);
-
-  const paginate = (pageNumber) => {
-    setCurrentPage(pageNumber);
-  };
 
   const handleSearch = (event) => {
     setSearchTerm(event.target.value);
@@ -51,6 +48,27 @@ function TableComponent() {
     setFilteredOrders(orderss);
     setCurrentPage(1);
   };
+
+  // pagination logic
+  useEffect(() => {
+    setTotalPages(Math.ceil(orders.length / itemsPerPage));
+  }, [orders]);
+
+  const listOfOrders = () => {
+    const startIndex = currentPage * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    const subset = orders.slice(startIndex, endIndex);
+    setData(subset);
+  };
+
+  useEffect(() => {
+    listOfOrders();
+  }, [orders]);
+
+  const handlePageChange = (selectedPage) => {
+    setCurrentPage(selectedPage.selected);
+  };
+  // end of pagination logic
 
   return (
     <div className={styles.tableContainer}>
@@ -92,8 +110,8 @@ function TableComponent() {
               </tr>
             </thead>
             <tbody>
-              {!searchTerm && orders.length > 0 ? (
-                orders.map((item, index) => {
+              {!searchTerm && data.length > 0 ? (
+                data.map((item, index) => {
                   return (
                     <tr
                       className={styles.rowEven}
@@ -102,7 +120,7 @@ function TableComponent() {
                     >
                       {/* <td>{item.id}</td> */}
                       <td>
-                        <img src={item?.items[0].thumbnailUrl} alt="image" />
+                        <img src={item?.items[0].thumbnailUrl} />
                       </td>
                       <td>{item.id}</td>
                       <td>{item?.recipient.name}</td>
@@ -167,21 +185,15 @@ function TableComponent() {
             </tbody>
           </table>
           <div className={styles.pagination}>
-            {orders.length > itemsPerPage && (
-              <ul>
-                {Array.from({
-                  length: Math.ceil(orders.length / itemsPerPage),
-                }).map((_, index) => (
-                  <li
-                    key={index + 1}
-                    className={currentPage === index + 1 ? "active" : ""}
-                    onClick={() => paginate(index + 1)}
-                  >
-                    {index + 1}
-                  </li>
-                ))}
-              </ul>
-            )}
+            <ReactPaginate
+              pageCount={totalPages}
+              onPageChange={handlePageChange}
+              forcePage={currentPage}
+              breakLabel={"..."}
+              previousLabel={<FaChevronLeft color="white" />}
+              nextLabel={<FaChevronRight color="white" />}
+              containerClassName={"default-pagination"}
+            />
           </div>
         </div>
       )}

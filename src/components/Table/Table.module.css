@@ -4,7 +4,7 @@
     align-items: center;
 }
 
-.table-container {
+.table {
     width: 100%;
     margin: 0 auto;
     background-color: #333;
@@ -13,11 +13,10 @@
 }
 
 .filterInput {
-    width: 100%;
+    width: 40%;
     padding: 8px;
     margin-bottom: 10px;
     outline: none;
-    border-radius: 5px;
     border: none;
 }
 
@@ -74,4 +73,5 @@
 .table-container img {
     height: 40px;
     width: 40px;
+    border: 1px solid white;
 }

@@ -21,3 +21,13 @@
     border-radius: 5px;
     text-decoration: none;
 }
+
+@media only screen and (max-width: 600px) {
+    .wrapper h2 {
+        font-size: 60px;
+    }
+
+    .wrapper p {
+        font-size: 20px;
+    }
+}

@@ -51,13 +51,13 @@ function TableComponent() {
 
   // pagination logic
   useEffect(() => {
-    setTotalPages(Math.ceil(orders.length / itemsPerPage));
+    setTotalPages(Math.ceil(orders?.length / itemsPerPage));
   }, [orders]);
 
   const listOfOrders = () => {
     const startIndex = currentPage * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
-    const subset = orders.slice(startIndex, endIndex);
+    const subset = orders?.slice(startIndex, endIndex);
     setData(subset);
   };
 

@@ -15,10 +15,10 @@ const OrderDetails = () => {
   const [loading, setLoading] = useState(false);
 
   const getSingleOrder = async () => {
-    setLoading(true);
+    // setLoading(true);
     await dispatch(getOrder(id)).then((res) => {
       setOrder(res.payload.order);
-      setLoading(false);
+      // setLoading(false);
     });
   };
 

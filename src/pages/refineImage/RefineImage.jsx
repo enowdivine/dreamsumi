@@ -200,11 +200,10 @@ const RefineImage = () => {
                       onClick={() => handleSelect(button)}
                       key={index}
                       style={{
-                        height: "300px",
-                        width: "300px",
                         backgroundColor: button.id === option ? "grey" : "",
                         opacity: 0.5,
                       }}
+                      className={styles.selectBtns}
                     ></div>
                   ))}
                 </div>

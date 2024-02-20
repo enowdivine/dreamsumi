@@ -23,6 +23,7 @@ function ProfileDropdown() {
         dispatch(logout());
         setAuthenticated(false);
         navigate("/");
+        window.location.reload(true);
       }
       return;
     } catch (error) {

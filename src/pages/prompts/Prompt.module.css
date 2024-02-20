@@ -12,7 +12,6 @@
     width: 60%;
     margin: auto;
     margin-top: 180px;
-    /* background-color: #fff; */
 }
 
 .btnDiv button {
@@ -33,4 +32,15 @@
 .btnDiv button:disabled {
     color: #ccc;
     border: 1px solid #ccc;
+}
+
+@media only screen and (max-width: 768px) {
+    .btnDiv {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin: auto;
+        margin-top: 140px;
+        margin-bottom: 40px;
+    }
 }

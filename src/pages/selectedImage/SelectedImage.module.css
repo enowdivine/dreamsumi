@@ -35,3 +35,34 @@
     border-radius: 5px;
     font-size: 12px;
 }
+
+@media only screen and (max-width: 768px) {
+    .btns {
+        display: block;
+        width: 90%;
+        margin-top: 50px !important;
+    }
+
+    .btns a {
+        margin: 50px !important;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .btns {
+        display: block !important;
+        width: 100% !important;
+    }
+
+    .btns a {
+        margin: 10px !important;
+    }
+
+    .imgDiv {
+        width: 100%;
+    }
+
+    .imgDiv img {
+        width: 100% !important;
+    }
+}

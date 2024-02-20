@@ -21,7 +21,6 @@
     background-color: #fff;
     border-radius: 10px;
     padding: 0;
-    border-color: #373196;
 }
 
 .inputDiv div {
@@ -51,4 +50,10 @@
     outline: none;
     font-size: 18px;
     border: none;
+}
+
+@media only screen and (max-width: 768px) {
+    .inputDiv div {
+        display: none;
+    }
 }

@@ -21,6 +21,11 @@
     height: 600px;
 }
 
+.selectBtns {
+    width: 300px;
+    height: 300px;
+}
+
 .btns {
     margin-left: 40px;
     text-align: center;
@@ -49,4 +54,46 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+@media only screen and (max-width: 768px) {
+    .content {
+        width: 90%;
+        padding-top: 100px;
+    }
+
+    .generatedSection {
+        display: block;
+    }
+
+    .btns {
+        width: 90%;
+        margin-top: 40px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .content {
+        width: 90%;
+        padding-top: 100px;
+    }
+
+    .generatedSection {
+        display: block;
+    }
+
+    .images img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .selectBtns {
+        width: 100%;
+        height: 100%;
+    }
+
+    .btns {
+        width: 100%;
+        margin: 10px 0 0 0;
+    }
 }

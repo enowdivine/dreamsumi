@@ -123,7 +123,6 @@ const Checkout = () => {
           color,
         })
       ).then((res) => {
-        console.log(res);
         if (res.meta.requestStatus === "rejected") {
           toast.error("An error occured");
           setLoading(false);

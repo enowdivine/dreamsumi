@@ -26,6 +26,7 @@ const SocialLogin = ({ text }) => {
     <div className={styles.loginContainer}>
       <div className={styles.facebook}>
         <LoginSocialFacebook
+          className={styles.facebookButton}
           appId={process.env.REACT_APP_FB_APP_ID || "1556270135133846"}
           // fieldsProfile={
           //     'id,first_name,last_name,middle_name,name,name_format,picture,short_name,email,gender'
@@ -52,6 +53,7 @@ const SocialLogin = ({ text }) => {
 
       <div className={styles.google}>
         <LoginSocialGoogle
+          className={styles.googleButton}
           client_id={
             process.env.REACT_APP_GG_APP_ID ||
             "574116481630-sltoijl2j2cigt5htcm30gpv51oat5ab.apps.googleusercontent.com"

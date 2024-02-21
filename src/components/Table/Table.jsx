@@ -110,7 +110,7 @@ function TableComponent() {
               </tr>
             </thead>
             <tbody>
-              {!searchTerm && data.length > 0 ? (
+              {!searchTerm && data?.length > 0 ? (
                 data.map((item, index) => {
                   return (
                     <tr
@@ -141,7 +141,7 @@ function TableComponent() {
                     </tr>
                   );
                 })
-              ) : searchTerm && filteredOrders.length > 0 ? (
+              ) : searchTerm && filteredOrders?.length > 0 ? (
                 filteredOrders.map((item, index) => {
                   return (
                     <tr

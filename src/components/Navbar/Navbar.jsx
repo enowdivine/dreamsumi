@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import styles from "./Navbar.module.css";
 import Dropdown from "../Dropdown/Dropdown";
 import { UserContext } from "../../context/UserContext";
-import { GiHamburgerMenu } from "react-icons/gi";
+import MobileDrawer from "../MobileDrawer/MobileDrawer";
 
 const Navbar = () => {
   const { userCredit, authenticated } = useContext(UserContext);
@@ -37,7 +37,7 @@ const Navbar = () => {
         )}
       </div>
       <div className={styles.mobileIcon}>
-        <GiHamburgerMenu />
+        <MobileDrawer />
       </div>
     </div>
   );

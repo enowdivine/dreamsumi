@@ -126,6 +126,10 @@
         padding: 10px;
     }
 
+    .imageSection table {
+        width: 100% !important;
+    }
+
     .rightDetails {
         width: 100%;
         margin: 10px 0;

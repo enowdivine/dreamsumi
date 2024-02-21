@@ -68,7 +68,9 @@ function MobileDrawer() {
             {authenticated ? (
               <li>
                 <small>05.</small>
-                <Link to="#">LOGOUT</Link>
+                <Link to="#" onClick={handleLogout}>
+                  LOGOUT
+                </Link>
               </li>
             ) : (
               <>
@@ -78,9 +80,7 @@ function MobileDrawer() {
                 </li>
                 <li>
                   <small>06.</small>
-                  <Link to="/signup" onClick={handleLogout}>
-                    SIGN UP
-                  </Link>
+                  <Link to="/signup">SIGN UP</Link>
                 </li>
               </>
             )}

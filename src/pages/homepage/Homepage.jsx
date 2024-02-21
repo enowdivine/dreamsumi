@@ -10,24 +10,30 @@ const Homepage = () => {
   return (
     <div className={styles.homewrapper}>
       <Navbar />
-      <div className={styles.contentWrapper}>
-        <div className={styles.content}>
-          <div>
-            <h3>I want to dream of ...</h3>
-          </div>
-          <div className={styles.inputDiv}>
-            <input
-              type="text"
-              placeholder="Write your dream ..."
-              value={dream}
-              onChange={(e) => setDream(e.target.value)}
-            />
-            <Link to="/prompts">
-              <FaArrowRightLong size={24} color="grey" />
-            </Link>
-          </div>
-          <div className={styles.btnDiv}>
-            <Link to="/dreams">See what other are dreaming</Link>
+      <div className={styles.videoBackground}>
+        <video autoPlay loop muted playsInline>
+          <source src="/assets/videos/vid.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+        <div className={styles.contentWrapper}>
+          <div className={styles.content}>
+            <div>
+              <h3>I want to dream of ...</h3>
+            </div>
+            <div className={styles.inputDiv}>
+              <input
+                type="text"
+                placeholder="Write your dream ..."
+                value={dream}
+                onChange={(e) => setDream(e.target.value)}
+              />
+              <Link to="/prompts">
+                <FaArrowRightLong size={24} color="grey" />
+              </Link>
+            </div>
+            <div className={styles.btnDiv}>
+              <Link to="/dreams">See what other are dreaming</Link>
+            </div>
           </div>
         </div>
       </div>

@@ -14,6 +14,7 @@ export const getStripeSecret = createAsyncThunk("prodigi/getStripeSecret", async
                 "Content-Type": "application/json",
             },
         })
+        console.log(response)
         return response.data
     } catch (error) {
         const message =

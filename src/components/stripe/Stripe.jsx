@@ -18,7 +18,7 @@ const Checkout = ({ amount, handlePrint, quoteLoading }) => {
 
   useEffect(() => {
     dispatch(getStripeSecret(amount)).then((res) => {
-      setClientSecret(res.payload.clientSecret);
+      setClientSecret(res?.payload?.clientSecret);
     });
   }, [amount]);
 

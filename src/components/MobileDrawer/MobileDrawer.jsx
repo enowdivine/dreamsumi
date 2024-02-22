@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import styles from "./drawerStyles.module.css";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { IoMdClose } from "react-icons/io";
@@ -6,16 +6,25 @@ import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { logout } from "../../store/reducers/auth";
 import { UserContext } from "../../context/UserContext";
+import SocialLogout from "../socialLogin/SocialLogout";
 
 function MobileDrawer() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { authenticated, setAuthenticated } = useContext(UserContext);
+  const { authenticated, setAuthenticated, socialProvider, setSocialProvider } =
+    useContext(UserContext);
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleDrawer = () => {
     setIsOpen(!isOpen);
   };
+
+  useEffect(() => {
+    const provider = JSON.parse(
+      localStorage.getItem("dreamsumiai-social-provider")
+    );
+    setSocialProvider(provider);
+  }, []);
 
   const handleLogout = () => {
     try {
@@ -66,12 +75,19 @@ function MobileDrawer() {
               <Link to="/how-it-works">HOW IT WORKS</Link>
             </li>
             {authenticated ? (
-              <li>
-                <small>05.</small>
-                <Link to="#" onClick={handleLogout}>
-                  LOGOUT
-                </Link>
-              </li>
+              socialProvider && socialProvider === "GOOGLE" ? (
+                <li style={{ display: "flex" }}>
+                  <small style={{ marginTop: 5 }}>05.</small>
+                  <SocialLogout text={"LOGOUT"} />
+                </li>
+              ) : (
+                <li>
+                  <small>05.</small>
+                  <Link to="#" onClick={handleLogout}>
+                    LOGOUT
+                  </Link>
+                </li>
+              )
             ) : (
               <>
                 <li>

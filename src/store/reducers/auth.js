@@ -100,6 +100,10 @@ export const google = createAsyncThunk("auth/google", async (data, thunkAPI) => 
                 "dreamsumiai-usercredit",
                 JSON.stringify(response.data.credit)
             )
+            localStorage.setItem(
+                "dreamsumiai-social-provider",
+                JSON.stringify(response.data.provider)
+            )
         }
         return response.data
     } catch (error) {
@@ -118,6 +122,8 @@ export const authSlice = createSlice({
         logout: state => {
             state.user = null
             localStorage.removeItem("dreamsumiai-user")
+            localStorage.removeItem("dreamsumiai-usercredit")
+            localStorage.removeItem("ddreamsumiai-social-provider")
         },
     },
     extraReducers: builder => {

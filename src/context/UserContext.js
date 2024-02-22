@@ -8,6 +8,7 @@ export default ({ children }) => {
     const [userToken, setUserToken] = useState("");
     const [userCredit, setUserCredit] = useState("");
     const [userEmail, setUserEmail] = useState("");
+    const [socialProvider, setSocialProvider] = useState("");
     const [authenticated, setAuthenticated] = useState(false);
 
     const [dream, setDream] = useState("")
@@ -77,7 +78,10 @@ export default ({ children }) => {
                 setSelectedImage,
 
                 userCredit,
-                setUserCredit
+                setUserCredit,
+
+                socialProvider,
+                setSocialProvider
             }}
         >
             {children}

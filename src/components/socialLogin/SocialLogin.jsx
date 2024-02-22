@@ -10,11 +10,10 @@ import { google } from "../../store/reducers/auth";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 
-const googleId =
-  "574116481630-sltoijl2j2cigt5htcm30gpv51oat5ab.apps.googleusercontent.com";
-
 const SocialLogin = ({ text }) => {
-  const { setUserToken, setAuthenticated, setUserCredit } =
+  const googleId =
+    "574116481630-sltoijl2j2cigt5htcm30gpv51oat5ab.apps.googleusercontent.com";
+  const { setUserToken, setAuthenticated, setUserCredit, setSocialProvider } =
     useContext(UserContext);
   const dispatch = useDispatch();
   const navigate = useNavigate();
@@ -34,7 +33,6 @@ const SocialLogin = ({ text }) => {
       const { email, googleId } = res.profileObj;
       await dispatch(google({ email, googleId, provider: "GOOGLE" })).then(
         (res) => {
-          console.log(res.payload);
           if (res.meta.requestStatus === "rejected") {
             toast.error("authentication error");
             return;
@@ -43,6 +41,7 @@ const SocialLogin = ({ text }) => {
             setAuthenticated(true);
             setUserCredit(res.payload.credit);
             setUserToken(res.payload.token);
+            setSocialProvider(res.payload.provider);
             navigate("/");
             return;
           }

@@ -1,20 +1,25 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import styles from "./Dropdown.module.css";
 import { AiOutlineUser } from "react-icons/ai";
 import { Link, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { logout } from "../../store/reducers/auth";
 import { UserContext } from "../../context/UserContext";
-// import { GoogleLogout } from "react-google-login";
-
-// const googleId =
-//   "574116481630-sltoijl2j2cigt5htcm30gpv51oat5ab.apps.googleusercontent.com";
+import SocialLogout from "../socialLogin/SocialLogout";
 
 function ProfileDropdown() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { setAuthenticated } = useContext(UserContext);
+  const { setAuthenticated, socialProvider, setSocialProvider } =
+    useContext(UserContext);
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    const provider = JSON.parse(
+      localStorage.getItem("dreamsumiai-social-provider")
+    );
+    setSocialProvider(provider);
+  }, []);
 
   const toggleDropdown = () => {
     setIsOpen(!isOpen);
@@ -35,14 +40,6 @@ function ProfileDropdown() {
     }
   };
 
-  // const onGoogleSuccess = (res) => {
-  //   console.log(res);
-  // };
-
-  // const onGoogleFailure = (res) => {
-  //   console.log("Failed", res);
-  // };
-
   return (
     <div className={styles.container}>
       <div className={styles.profileIcon} onClick={toggleDropdown}>
@@ -53,24 +50,15 @@ function ProfileDropdown() {
         <div className={styles.dropdownContent}>
           <Link to="/profile">Profile</Link>
           <Link to="/orders">Orders</Link>
-          <Link to="#" onClick={handleLogout}>
-            Logout
-          </Link>
-          {/* <GoogleLogout
-            clientId={googleId}
-            onSuccess={onGoogleSuccess}
-            onFailure={onGoogleFailure}
-            render={(renderProps) => (
-              // <button
-              //   className={styles.googleLogin}
-              //   onClick={renderProps.onClick}
-              //   disabled={renderProps.disabled}
-              // >
-              //   <FcGoogle /> Logout
-              // </button>
-              <Link onClick={renderProps.onClick}>Logout</Link>
-            )}
-          /> */}
+          {socialProvider && socialProvider === "GOOGLE" ? (
+            <Link to="#">
+              <SocialLogout text={"Logout"} />
+            </Link>
+          ) : (
+            <Link to="#" onClick={handleLogout}>
+              Logout
+            </Link>
+          )}
         </div>
       )}
     </div>

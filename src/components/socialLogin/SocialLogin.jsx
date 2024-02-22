@@ -1,84 +1,111 @@
-import React, { useState, useCallback } from "react";
-import { LoginSocialGoogle, LoginSocialFacebook } from "reactjs-social-login";
+import React, { useEffect, useContext } from "react";
 import styles from "./styles.module.css";
 import { FaFacebook } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
+import { gapi } from "gapi-script";
+import { GoogleLogin } from "react-google-login";
+import { UserContext } from "../../context/UserContext";
+import { useDispatch } from "react-redux";
+import { google } from "../../store/reducers/auth";
+import toast from "react-hot-toast";
+import { useNavigate } from "react-router-dom";
+
+const googleId =
+  "574116481630-sltoijl2j2cigt5htcm30gpv51oat5ab.apps.googleusercontent.com";
 
 const SocialLogin = ({ text }) => {
-  const [provider, setProvider] = useState("");
-  const [profile, setProfile] = useState(null);
+  const { setUserToken, setAuthenticated, setUserCredit } =
+    useContext(UserContext);
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-  const onLoginStart = useCallback(() => {
-    alert("login start");
-  }, []);
+  useEffect(() => {
+    const start = () => {
+      gapi.client.init({
+        clientId: googleId,
+        scope: "",
+      });
+    };
+    gapi.load("client:auth2", start);
+  }, [googleId]);
 
-  const onLogoutSuccess = useCallback(() => {
-    setProfile(null);
-    setProvider("");
-    alert("logout success");
-  }, []);
+  const onGoogleSuccess = async (res) => {
+    try {
+      const { email, googleId } = res.profileObj;
+      await dispatch(google({ email, googleId, provider: "GOOGLE" })).then(
+        (res) => {
+          console.log(res.payload);
+          if (res.meta.requestStatus === "rejected") {
+            toast.error("authentication error");
+            return;
+          } else {
+            toast.success(res.payload.message);
+            setAuthenticated(true);
+            setUserCredit(res.payload.credit);
+            setUserToken(res.payload.token);
+            navigate("/");
+            return;
+          }
+        }
+      );
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
-  const onLogout = useCallback(() => {}, []);
+  const onGoogleFailure = (res) => {
+    console.log("Failed", res);
+  };
 
-  const REDIRECT_URI = "https://dreamsumiai.netlify.app/login";
+  const onFacebookSuccess = (res) => {
+    console.log(res);
+  };
+
+  const onFacebookFailure = (res) => {
+    console.log("Failed", res);
+  };
 
   return (
     <div className={styles.loginContainer}>
-      <div className={styles.facebook}>
-        <LoginSocialFacebook
-          className={styles.facebookButton}
-          appId={process.env.REACT_APP_FB_APP_ID || "1556270135133846"}
-          // fieldsProfile={
-          //     'id,first_name,last_name,middle_name,name,name_format,picture,short_name,email,gender'
-          // }
-          onLoginStart={onLoginStart}
-          onLogoutSuccess={onLogoutSuccess}
-          // redirect_uri={REDIRECT_URI}
-          onResolve={({ provider, data }) => {
-            console.log("completed");
-            localStorage.setItem("data", JSON.stringify({ provider, data }));
-            setProvider(provider);
-            setProfile(data);
-          }}
-          onReject={(err) => {
-            console.log(err);
-          }}
-        >
-          <button className={styles.facebookLogin}>
-            <FaFacebook />
-            {"   "} {text} with Facebook
-          </button>
-        </LoginSocialFacebook>
+      <div className={styles.facebookDiv}>
+        <GoogleLogin
+          clientId="1556270135133846"
+          buttonText="Login"
+          onSuccess={onFacebookSuccess}
+          onFailure={onFacebookFailure}
+          cookiePolicy="single_host_origin"
+          isSignedIn={true}
+          render={(renderProps) => (
+            <button
+              className={styles.facebookLogin}
+              onClick={renderProps.onClick}
+              // disabled={renderProps.disabled}
+              disabled={true}
+            >
+              <FaFacebook /> {text} with Facebook
+            </button>
+          )}
+        />
       </div>
 
-      <div className={styles.google}>
-        <LoginSocialGoogle
-          className={styles.googleButton}
-          client_id={
-            process.env.REACT_APP_GG_APP_ID ||
-            "574116481630-sltoijl2j2cigt5htcm30gpv51oat5ab.apps.googleusercontent.com"
-          }
-          onLoginStart={onLoginStart}
-          // redirect_uri={REDIRECT_URI}
-          // scope="openid profile email"
-          // discoveryDocs="claims_supported"
-          // access_type="offline"
-          onResolve={({ provider, data }) => {
-            console.log("completed");
-            localStorage.setItem("data", JSON.stringify({ provider, data }));
-            setProvider(provider);
-            setProfile(data);
-          }}
-          onReject={(err) => {
-            console.log(err);
-          }}
-        >
-          <button className={styles.googleLogin}>
-            <FcGoogle />
-            {"   "}
-            {text} with Google
-          </button>
-        </LoginSocialGoogle>
+      <div className={styles.googleDiv}>
+        <GoogleLogin
+          clientId={googleId}
+          buttonText="Login"
+          onSuccess={onGoogleSuccess}
+          onFailure={onGoogleFailure}
+          cookiePolicy="single_host_origin"
+          isSignedIn={true}
+          render={(renderProps) => (
+            <button
+              className={styles.googleLogin}
+              onClick={renderProps.onClick}
+              disabled={renderProps.disabled}
+            >
+              <FcGoogle /> {text} with Google
+            </button>
+          )}
+        />
       </div>
     </div>
   );

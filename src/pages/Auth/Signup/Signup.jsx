@@ -76,7 +76,7 @@ const Signup = () => {
             {loading ? "Loading..." : "Confirm"}
           </button>
           <div className={styles.OR}>OR</div>
-          <SocialLogin text={"Signup"} />
+          <SocialLogin text={"Sign up"} />
           <div>
             <p>Already have an account?</p>
             <Link to="/login">Login</Link>

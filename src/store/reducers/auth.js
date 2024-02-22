@@ -3,7 +3,6 @@ import axios from "axios"
 
 const url = `${process.env.REACT_APP_BACKEND}/api/${process.env.REACT_APP_API_VERSION}/user`
 
-
 const initialState = {
     user: null,
 }
@@ -84,6 +83,33 @@ export const updateDetails = createAsyncThunk(
         }
     }
 )
+
+export const google = createAsyncThunk("auth/google", async (data, thunkAPI) => {
+    try {
+        const response = await axios.post(`${url}/google`, data, {
+            headers: {
+                "Content-Type": "application/json",
+            },
+        })
+        if (response.data) {
+            localStorage.setItem(
+                "dreamsumiai-user",
+                JSON.stringify(response.data.token)
+            )
+            localStorage.setItem(
+                "dreamsumiai-usercredit",
+                JSON.stringify(response.data.credit)
+            )
+        }
+        return response.data
+    } catch (error) {
+        const message =
+            (error.message && error.response.data && error.response.data.message) ||
+            error.message ||
+            error.toString()
+        return thunkAPI.rejectWithValue(message)
+    }
+})
 
 export const authSlice = createSlice({
     name: "auth",

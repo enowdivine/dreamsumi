@@ -3,10 +3,9 @@
     flex-direction: column;
 }
 
-.facebookButton,
-.googleButton {
-    width: 100% !important;
-    margin-top: -30px !important;
+.facebookDiv,
+.googleDiv {
+    margin-top: -10px !important;
 }
 
 .facebookLogin {
@@ -22,16 +21,6 @@
 @media only screen and (max-width: 600px) {
     .loginContainer {
         width: 100%;
-    }
-
-    .loginContainer .facebook,
-    .loginContainer .google {
-        width: 100%;
-    }
-
-    .facebookButton,
-    .googleButton {
-        width: 100% !important;
     }
 
 }

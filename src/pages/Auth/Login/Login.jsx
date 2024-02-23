@@ -24,7 +24,7 @@ const Login = () => {
         setLoading(true);
         await dispatch(login({ email, password })).then((res) => {
           if (res.meta.requestStatus === "rejected") {
-            toast.error("email or password incorrect");
+            toast.error(res.payload);
             setLoading(false);
             return;
           } else {

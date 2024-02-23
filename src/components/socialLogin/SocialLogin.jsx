@@ -34,7 +34,7 @@ const SocialLogin = ({ text }) => {
       await dispatch(google({ email, googleId, provider: "GOOGLE" })).then(
         (res) => {
           if (res.meta.requestStatus === "rejected") {
-            toast.error("authentication error");
+            toast.error(res.payload);
             return;
           } else {
             toast.success(res.payload.message);

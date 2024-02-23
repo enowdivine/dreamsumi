@@ -81,7 +81,12 @@
     padding: 10px 20px;
     color: white;
     border-radius: 5px;
-    font-size: 12px;
+    font-size: 15px;
+}
+
+.btns a:hover {
+    background-color: #fff;
+    color: #000;
 }
 
 @media only screen and (max-width: 768px) {

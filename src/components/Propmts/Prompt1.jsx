@@ -3,8 +3,7 @@ import styles from "./Styles.module.css";
 import { UserContext } from "../../context/UserContext";
 
 const Prompt1 = () => {
-  const { dreamObject, setDreamObject, setGeneratingImage } =
-    useContext(UserContext);
+  const { dream, setDream, setGeneratingImage } = useContext(UserContext);
 
   useEffect(() => {
     setGeneratingImage(false);
@@ -21,8 +20,8 @@ const Prompt1 = () => {
         <input
           type="text"
           placeholder="Enter ..."
-          value={dreamObject}
-          onChange={(e) => setDreamObject(e.target.value)}
+          value={dream}
+          onChange={(e) => setDream(e.target.value)}
         />
       </div>
       <div className={styles.tips}>

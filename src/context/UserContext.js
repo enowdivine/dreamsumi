@@ -12,7 +12,6 @@ export default ({ children }) => {
     const [authenticated, setAuthenticated] = useState(false);
 
     const [dream, setDream] = useState("")
-    const [dreamObject, setDreamObject] = useState("")
     const [dreamLocation, setDreamLocation] = useState("")
     const [dreamAction, setDreamAction] = useState("")
     const [dreamMode, setDreamMode] = useState("")
@@ -54,7 +53,6 @@ export default ({ children }) => {
                 setAuthenticated,
 
                 dream,
-                dreamObject,
                 dreamLocation,
                 dreamAction,
                 dreamMode,
@@ -63,7 +61,6 @@ export default ({ children }) => {
                 artStyle,
 
                 setDream,
-                setDreamObject,
                 setDreamLocation,
                 setDreamAction,
                 setDreamMode,

@@ -10,7 +10,7 @@
 }
 
 .content h3 {
-    margin-bottom: 20px;
+    margin-bottom: 70px;
     font-size: 40px;
 }
 
@@ -33,7 +33,12 @@
     padding: 10px 20px;
     color: white;
     border-radius: 5px;
-    font-size: 12px;
+    font-size: 15px;
+}
+
+.btns a:hover {
+    background-color: #fff;
+    color: black;
 }
 
 @media only screen and (max-width: 768px) {

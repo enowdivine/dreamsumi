@@ -18,9 +18,7 @@
     }
 
     100% {
-        /* transform: translateX(-100%); */
-        transform: translateX(calc(-100%))
-            /* Adjust based on the number of images */
+        transform: translateX(100%);
     }
 }
 
@@ -35,9 +33,7 @@
     }
 
     100% {
-        /* transform: translateX(-100%); */
-        transform: translateX(calc(-200%))
-            /* Adjust based on the number of images */
+        transform: translateX(calc(-100%))
     }
 }
 
@@ -53,6 +49,7 @@
     cursor: pointer;
     animation: fadeIn 0.5s ease-in-out;
     border-radius: 10px;
+    background-color: #ccc;
 }
 
 @keyframes fadeIn {

@@ -24,10 +24,14 @@
 
 .content {
     width: 80%;
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .content h3 {
-    font-size: 40px;
+    font-size: 60px;
     margin-top: 100px;
 }
 
@@ -36,7 +40,6 @@
     justify-content: center;
     align-items: center;
     background-color: #fff;
-    margin-top: 200px;
     border-radius: 10px;
 }
 
@@ -57,9 +60,7 @@
     border: none;
 }
 
-.btnDiv {
-    margin-top: 260px;
-}
+/* .btnDiv {} */
 
 .btnDiv a {
     background-color: #373196;
@@ -67,6 +68,7 @@
     padding: 10px;
     border-radius: 10px;
     text-decoration: none;
+    font-size: 20px;
 }
 
 @media only screen and (max-width: 600px) {

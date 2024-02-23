@@ -8,6 +8,12 @@ const SelectedImage = () => {
   const { selectedImage, setSelectedImage } = useContext(UserContext);
 
   useEffect(() => {
+    if (selectedImage) {
+      window.location.reload();
+    }
+  }, []);
+
+  useEffect(() => {
     let _data = window.localStorage.getItem("selectedImage");
     setSelectedImage(_data);
   }, []);

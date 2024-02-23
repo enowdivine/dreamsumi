@@ -70,6 +70,14 @@ function TableComponent() {
   };
   // end of pagination logic
 
+  const viewDetails = (item) => {
+    if (item.shipments[0]?.status === "Shipped") {
+      navigate(`/order/${item.id}`);
+      return;
+    }
+    return;
+  };
+
   return (
     <div className={styles.tableContainer}>
       {loading ? (
@@ -116,17 +124,23 @@ function TableComponent() {
                     <tr
                       className={styles.rowEven}
                       key={index}
-                      onClick={() => navigate(`/order/${item.id}`)}
+                      onClick={() => viewDetails(item)}
                     >
                       {/* <td>{item.id}</td> */}
                       <td>
-                        <img src={item?.items[0].thumbnailUrl} />
+                        <img
+                          src={
+                            item?.items[0].thumbnailUrl ||
+                            "/assets/demo/dreamsumi.jpeg"
+                          }
+                          style={{ width: 40, height: 40 }}
+                        />
                       </td>
                       <td>{item.id}</td>
                       <td>{item?.recipient.name}</td>
                       <td>{formatDate(item.created)}</td>
                       <td>{item.items[0]?.copies}</td>
-                      <td>$ {item.charges[0]?.totalCost.amount}</td>
+                      <td>$ {item.items[0]?.recipientCost?.amount}</td>
                       <td
                         style={{
                           color:
@@ -147,7 +161,7 @@ function TableComponent() {
                     <tr
                       className={styles.rowEven}
                       key={index}
-                      onClick={() => navigate(`/order/${item.id}`)}
+                      onClick={() => viewDetails(item)}
                     >
                       {/* <td>{item.id}</td> */}
                       <td>
@@ -157,7 +171,7 @@ function TableComponent() {
                       <td>{item?.recipient.name}</td>
                       <td>{item.created}</td>
                       <td>{item.items[0]?.copies}</td>
-                      <td>$ {item.charges[0]?.totalCost.amount}</td>
+                      <td>$ {item.items[0]?.recipientCost?.amount}</td>
                       <td
                         style={{
                           color:

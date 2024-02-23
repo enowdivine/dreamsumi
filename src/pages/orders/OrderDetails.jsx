@@ -15,10 +15,10 @@ const OrderDetails = () => {
   const [loading, setLoading] = useState(false);
 
   const getSingleOrder = async () => {
-    // setLoading(true);
+    setLoading(true);
     await dispatch(getOrder(id)).then((res) => {
       setOrder(res.payload.order);
-      // setLoading(false);
+      setLoading(false);
     });
   };
 
@@ -92,7 +92,12 @@ const OrderDetails = () => {
                 </div>
                 <div className={styles.imageSection}>
                   <div>
-                    <img src={order?.items[0]?.thumbnailUrl} alt="image" />
+                    <img
+                      src={
+                        order?.items[0]?.thumbnailUrl ||
+                        "/assets/demo/dreamsumi.jpeg"
+                      }
+                    />
                   </div>
                   <table>
                     <thead>

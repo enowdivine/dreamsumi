@@ -49,7 +49,6 @@
     cursor: pointer;
     animation: fadeIn 0.5s ease-in-out;
     border-radius: 10px;
-    background-color: #ccc;
 }
 
 @keyframes fadeIn {

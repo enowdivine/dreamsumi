@@ -186,24 +186,17 @@ const RefineImage = () => {
             <p>Select an image to further refine/finalise</p>
             <div className={styles.generatedSection}>
               <div className={styles.images}>
-                <div
-                  style={{
-                    position: "absolute",
-                    display: "flex",
-                    flexWrap: "wrap",
-                    height: "50%",
-                    width: "50%",
-                  }}
-                >
+                <div className={styles.selectBtnDiv}>
                   {buttons.map((button, index) => (
                     <div
                       onClick={() => handleSelect(button)}
                       key={index}
                       style={{
+                        height: "50%",
+                        width: "50%",
                         backgroundColor: button.id === option ? "grey" : "",
                         opacity: 0.5,
                       }}
-                      className={styles.selectBtns}
                     ></div>
                   ))}
                 </div>

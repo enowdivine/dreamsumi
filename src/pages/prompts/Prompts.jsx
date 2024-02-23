@@ -134,29 +134,30 @@ const Prompts = () => {
             <Prompt7 Loading={loading} SetLoading={setLoading} />
           )}
 
-          <div className={styles.btnDiv}>
-            <button onClick={decrementCount}>
-              {count === 5 && !editPromt
-                ? "Edit Prompt"
-                : count === 5 && editPromt
-                ? "Save Prompt"
-                : "Previous"}
-            </button>
-            <button
-              onClick={() => {
-                if (count === 6) {
-                  setLoading(true);
-                  setGeneratingImage(true);
-                  generate();
-                  return;
-                }
-                incrementCount();
-              }}
-              disabled={generatingImage}
-            >
-              {count === 6 ? "Create Image" : "Next"}
-            </button>
-          </div>
+          {!generatingImage && (
+            <div className={styles.btnDiv}>
+              <button onClick={decrementCount}>
+                {count === 5 && !editPromt
+                  ? "Edit Prompt"
+                  : count === 5 && editPromt
+                  ? "Save Prompt"
+                  : "Previous"}
+              </button>
+              <button
+                onClick={() => {
+                  if (count === 6) {
+                    setLoading(true);
+                    setGeneratingImage(true);
+                    generate();
+                    return;
+                  }
+                  incrementCount();
+                }}
+              >
+                {count === 6 ? "Create Image" : "Next"}
+              </button>
+            </div>
+          )}
         </div>
       </div>
     </div>

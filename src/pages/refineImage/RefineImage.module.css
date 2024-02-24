@@ -7,7 +7,7 @@
 
 .content {
     width: 90%;
-    padding-top: 30px;
+    padding-top: 80px;
 }
 
 .generatedSection {
@@ -18,21 +18,21 @@
 }
 
 .images {
-    width: 600px;
-    height: 600px;
+    position: relative;
+    width: 30%;
+    cursor: pointer;
 }
 
 .selectBtnDiv {
     position: absolute;
     display: flex;
     flex-wrap: wrap;
-    height: 600px;
-    width: 600px;
+    width: 100%;
+    height: 100%;
 }
 
 .images img {
-    width: 600px;
-    height: 600px;
+    width: 100%;
 }
 
 .btns {
@@ -92,18 +92,18 @@
     }
 
     .images {
-        width: 320px;
-        height: 320px;
+        width: 100%;
+        /* height: 320px; */
     }
 
-    .selectBtnDiv {
+    /* .selectBtnDiv {
         height: 320px;
         width: 320px;
-    }
+    } */
 
     .images img {
-        width: 320px;
-        height: 320px;
+        width: 100%;
+        /* height: 320px; */
     }
 
     .btns {

@@ -100,43 +100,58 @@ const Checkout = () => {
   const handlePrint = async (e) => {
     e.preventDefault();
     try {
-      if (countryCode.length > 3) {
-        toast.error("Invalid country code");
-        return;
-      }
-      setLoading(true);
-      await dispatch(
-        printOrder({
-          name,
-          address1,
-          address2,
-          shippingMethod,
-          postalOrZipCode,
-          sizing,
-          copies,
-          image,
-          cost,
-          townOrCity,
-          countryCode,
-          stateOrCounty,
-          sku,
-          color,
-        })
-      ).then((res) => {
-        if (res.meta.requestStatus === "rejected") {
-          toast.error("An error occured");
-          setLoading(false);
+      if (
+        name &&
+        address1 &&
+        address2 &&
+        shippingMethod &&
+        postalOrZipCode &&
+        copies &&
+        townOrCity &&
+        countryCode &&
+        stateOrCounty
+      ) {
+        if (countryCode.length > 3) {
+          toast.error("Invalid country code");
           return;
         }
-        if (!res.payload._result) {
+        setLoading(true);
+        await dispatch(
+          printOrder({
+            name,
+            address1,
+            address2,
+            shippingMethod,
+            postalOrZipCode,
+            sizing,
+            copies,
+            image,
+            cost,
+            townOrCity,
+            countryCode,
+            stateOrCounty,
+            sku,
+            color,
+          })
+        ).then((res) => {
+          if (res.meta.requestStatus === "rejected") {
+            toast.error("An error occured");
+            setLoading(false);
+            return;
+          }
+          if (!res.payload._result) {
+            setLoading(false);
+            return toast.error("Something went wrong!");
+          }
+          toast.success("Operation completed successfully!");
           setLoading(false);
-          return toast.error("Something went wrong!");
-        }
-        toast.success("Operation completed successfully!");
-        setLoading(false);
-        navigate("/order-complete");
+          navigate("/order-complete");
+          return;
+        });
+      } else {
+        toast.error("All fields are required");
         return;
-      });
+      }
     } catch (error) {
       console.error(error);
       setLoading(false);

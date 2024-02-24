@@ -5,6 +5,8 @@ import Homepage from './pages/homepage/Homepage';
 import Dreams from './pages/dreams/Dreams';
 import Signup from './pages/Auth/Signup/Signup';
 import Login from './pages/Auth/Login/Login';
+import ForgotPassword from './pages/Auth/Login/ForgotPassword';
+import ResetPassword from './pages/Auth/Login/ResetPassword';
 import Howitworks from './pages/Howitworks/Howitworks';
 import Prompts from './pages/prompts/Prompts';
 import RefineImage from './pages/refineImage/RefineImage';
@@ -28,6 +30,8 @@ function App() {
           <Route path="/dreams" element={<Dreams />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/reset-password/:token" element={<ResetPassword />} />
           <Route path="/how-it-works" element={<Howitworks />} />
           <Route path="/prompts" element={
             <ProtectedRoutes>

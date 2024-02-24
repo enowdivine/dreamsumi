@@ -53,6 +53,44 @@ export const login = createAsyncThunk("auth/login", async (data, thunkAPI) => {
     }
 })
 
+export const forgotPassword = createAsyncThunk("auth/forgotPassword", async (data, thunkAPI) => {
+    try {
+        const response = await axios.post(`${url}/forgot-password`, data, {
+            headers: {
+                "Content-Type": "application/json",
+            },
+        })
+        if (response.data) {
+        }
+        return response.data
+    } catch (error) {
+        const message =
+            (error.message && error.response.data && error.response.data.message) ||
+            error.message ||
+            error.toString()
+        return thunkAPI.rejectWithValue(message)
+    }
+})
+
+export const resetPassword = createAsyncThunk("auth/resetPassword", async (data, thunkAPI) => {
+    try {
+        const response = await axios.put(`${url}/reset-password/${data.id}`, data, {
+            headers: {
+                "Content-Type": "application/json",
+            },
+        })
+        if (response.data) {
+        }
+        return response.data
+    } catch (error) {
+        const message =
+            (error.message && error.response.data && error.response.data.message) ||
+            error.message ||
+            error.toString()
+        return thunkAPI.rejectWithValue(message)
+    }
+})
+
 export const updateDetails = createAsyncThunk(
     "auth/updateDetails",
     async (data, thunkAPI) => {

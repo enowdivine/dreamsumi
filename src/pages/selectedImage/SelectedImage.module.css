@@ -15,8 +15,8 @@
 }
 
 .imgDiv img {
-    width: 450px;
-    height: 450px;
+    width: 25%;
+    /* height: 450px; */
 }
 
 .btns {

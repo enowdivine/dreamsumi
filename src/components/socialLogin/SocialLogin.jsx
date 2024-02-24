@@ -11,8 +11,6 @@ import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 
 const SocialLogin = ({ text }) => {
-  const googleId =
-    "574116481630-sltoijl2j2cigt5htcm30gpv51oat5ab.apps.googleusercontent.com";
   const { setUserToken, setAuthenticated, setUserCredit, setSocialProvider } =
     useContext(UserContext);
   const dispatch = useDispatch();
@@ -21,12 +19,13 @@ const SocialLogin = ({ text }) => {
   useEffect(() => {
     const start = () => {
       gapi.client.init({
-        clientId: googleId,
+        clientId:
+          "574116481630-sltoijl2j2cigt5htcm30gpv51oat5ab.apps.googleusercontent.com",
         scope: "",
       });
     };
     gapi.load("client:auth2", start);
-  }, [googleId]);
+  });
 
   const onGoogleSuccess = async (res) => {
     try {
@@ -89,7 +88,7 @@ const SocialLogin = ({ text }) => {
 
       <div className={styles.googleDiv}>
         <GoogleLogin
-          clientId={googleId}
+          clientId="574116481630-sltoijl2j2cigt5htcm30gpv51oat5ab.apps.googleusercontent.com"
           buttonText="Login"
           onSuccess={onGoogleSuccess}
           onFailure={onGoogleFailure}

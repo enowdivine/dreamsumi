@@ -18,6 +18,10 @@ const Prompts = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const {
+    dream,
+    dreamLocation,
+    dreamAction,
+    dreamMode,
     generatingImage,
     setGeneratingImage,
     generatedPrompt,
@@ -154,7 +158,29 @@ const Prompts = () => {
                   incrementCount();
                 }}
               >
-                {count === 6 ? "Create Image" : "Next"}
+                {count === 6
+                  ? "Create Image"
+                  : count === 0 && dream
+                  ? "Next"
+                  : count === 0 && !dream
+                  ? "Skip"
+                  : count === 1 && dreamLocation
+                  ? "Next"
+                  : count === 1 && !dreamLocation
+                  ? "Skip"
+                  : count === 2 && dreamAction
+                  ? "Next"
+                  : count === 2 && !dreamAction
+                  ? "Skip"
+                  : count === 3 && dreamMode
+                  ? "Next"
+                  : count === 3 && !dreamMode
+                  ? "Skip"
+                  : count === 4 && aspectRatio
+                  ? "Next"
+                  : count === 4 && !aspectRatio
+                  ? "Skip"
+                  : "Next"}
               </button>
             </div>
           )}

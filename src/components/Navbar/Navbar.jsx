@@ -8,7 +8,7 @@ import MobileDrawer from "../MobileDrawer/MobileDrawer";
 const Navbar = () => {
   const { userCredit, authenticated } = useContext(UserContext);
   return (
-    <div className={styles.wrapper}>
+    <div className={`${styles.wrapper}`}>
       <div className={styles.brand}>
         <Link to="/">Dream Sumi</Link>
       </div>

@@ -76,7 +76,7 @@ const Prompts = () => {
       )
         .then((res) => {
           if (res.meta.requestStatus === "rejected") {
-            toast.error("An error occured");
+            toast.error("Something wen't wrong!!");
             setLoading(false);
             setGeneratingImage(false);
             return;

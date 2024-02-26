@@ -63,7 +63,7 @@ const PrintOption = () => {
     const handleScreenSizeChange = () => {
       if (window.matchMedia("(max-width: 600px)").matches) {
         setScreenSize("mobile");
-      } else if (window.matchMedia("(max-width: 900px)").matches) {
+      } else if (window.matchMedia("(max-width: 768px)").matches) {
         setScreenSize("tablet");
       } else {
         setScreenSize("desktop");

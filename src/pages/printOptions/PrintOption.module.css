@@ -64,7 +64,7 @@
 
 .displaySection .image {
     width: 545px;
-    margin: auto;
+    margin: auto
 }
 
 .btns {
@@ -135,17 +135,18 @@
     }
 
     .form {
+        width: 100%;
         margin-bottom: 10px;
     }
 
     .displaySection {
-        width: 100%;
+        width: 300px;
         margin: 0;
     }
 
     .displaySection .image {
-        width: 100%;
-        margin: auto;
+        width: 300px;
+        margin-left: 0px;
     }
 
     .btns {

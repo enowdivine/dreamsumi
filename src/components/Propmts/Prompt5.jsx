@@ -5,6 +5,11 @@ import { UserContext } from "../../context/UserContext";
 const Prompt1 = () => {
   const { aspectRatio, setAspectRatio } = useContext(UserContext);
 
+  const updateAspectRation = (text) => {
+    setAspectRatio(text);
+    localStorage.setItem("AspectRatio", text);
+  };
+
   return (
     <div className={styles.content}>
       <div>
@@ -16,10 +21,7 @@ const Prompt1 = () => {
             background: aspectRatio === "Portrait" ? "#aaa" : "#fff",
           }}
           className={styles.portrait}
-          onClick={() => {
-            setAspectRatio("Portrait");
-            localStorage.setItem("AspectRatio", "Portrait");
-          }}
+          onClick={() => updateAspectRation("Portrait")}
         >
           Potrait
         </div>
@@ -28,10 +30,7 @@ const Prompt1 = () => {
             background: aspectRatio === "Landscape" ? "#aaa" : "#fff",
           }}
           className={styles.landscape}
-          onClick={() => {
-            setAspectRatio("Landscape");
-            localStorage.setItem("AspectRatio", "Landscape");
-          }}
+          onClick={() => updateAspectRation("Landscape")}
         >
           Landscape
         </div>
@@ -40,10 +39,7 @@ const Prompt1 = () => {
             background: aspectRatio === "Square" ? "#aaa" : "#fff",
           }}
           className={styles.square}
-          onClick={() => {
-            setAspectRatio("Square");
-            localStorage.setItem("AspectRatio", "Square");
-          }}
+          onClick={() => updateAspectRation("Square")}
         >
           Square
         </div>

@@ -38,12 +38,14 @@ const Prompt1 = ({ Loading }) => {
                 onClick={() => setArtStyle(style.label)}
                 key={index}
                 style={{
-                  // backgroundImage: `url(${style.image})`,
-                  opacity: artStyle === style.label ? 0.2 : 0.8,
+                  backgroundImage: `url(${style.image})`,
+                  opacity: artStyle === style.label ? 0.3 : 1,
                 }}
                 className={styles.artStyle}
               >
-                {style.label}
+                <div className={styles.overlay}>
+                  <p>{style.label}</p>
+                </div>
               </div>
             ))}
           </div>
